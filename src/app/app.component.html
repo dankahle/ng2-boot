@@ -3,13 +3,22 @@
 <ul class="nav">
   <li *ngFor="let comp of comps"><a href="javascript:void(0)" (click)="selectedComp = comp">{{comp}}</a> </li>
 </ul>
+<div>Dynamic component:  <a href="javascript:void(0)" (click)="selectedComp = 'dynamicComp'">dynamicComp</a></div>
 
-<div *ngIf="selectedComp === 'alert'">
-  <demo-alert></demo-alert>
-</div>
+<hr>
+<div class="wrap-comp">
+  <div *ngIf="selectedComp === 'alert'">
+    <demo-alert></demo-alert>
+  </div>
 
-<div *ngIf="selectedComp === 'modalWithComp'">
-  <demo-modal-using-comp></demo-modal-using-comp>
+  <div *ngIf="selectedComp === 'modalWithComp'">
+    <demo-modal-using-comp></demo-modal-using-comp>
+  </div>
+
+  <div *ngIf="selectedComp === 'dynamicComp'">
+    <demo-dynamic></demo-dynamic>
+  </div>
+
 </div>
 
 

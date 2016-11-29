@@ -1,0 +1,12 @@
+<div>
+  <div>child begin</div>
+  <div>age: {{age}}</div>
+  <div>childcount: {{count}}</div>
+  <div><button (click)="add()">add</button></div>
+  <div>
+    <label>true: <input type="radio" [(ngModel)]="voteVal" [value]="true" (click)="voteIt(true)"></label>
+    <label>false: <input type="radio" [(ngModel)]="voteVal" [value]="false" (click)="voteIt(false)"></label>
+  </div>
+  <div>child end</div>
+</div>
+

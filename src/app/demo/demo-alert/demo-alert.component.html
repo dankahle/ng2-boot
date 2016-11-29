@@ -1,0 +1,4 @@
+
+<ngb-alert #ngbalert [dismissible]="true" type="danger" (close)="close($event)" [style.visibility]="visible">my alert text</ngb-alert>
+
+<button (click)="visible = visible === 'visible'? 'hidden': 'visible'">Show/Hide</button>

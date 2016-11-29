@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<template ngbModalContainer></template> <!--needed for modal-->
+
+<ul class="nav">
+  <li *ngFor="let comp of comps"><a href="javascript:void(0)" (click)="selectedComp = comp">{{comp}}</a> </li>
+</ul>
+
+<div *ngIf="selectedComp === 'alert'">
+  <demo-alert></demo-alert>
+</div>
+
+<div *ngIf="selectedComp === 'modalWithComp'">
+  <demo-modal-using-comp></demo-modal-using-comp>
+</div>
+
+

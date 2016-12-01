@@ -7,23 +7,23 @@ import {ChildComponent} from "../child/child.component";
   entryComponents: [ChildComponent]
 })
 export class DkDynamicComponent {
-  private c:ComponentRef<ChildComponent>;
+  private compRef:ComponentRef<ChildComponent>;
 
   constructor(private viewContainer: ViewContainerRef,
               private compResolver: ComponentFactoryResolver) {
   }
 
   ngOnInit() {
-    this.c = this.viewContainer.createComponent(this.compResolver.resolveComponentFactory(ChildComponent));
-    this.c.instance.age = 99;
-    let subs = this.c.instance.vote.subscribe(x => console.log('voted: ' + x));
-    this.c.onDestroy(() => {
+    this.compRef = this.viewContainer.createComponent(this.compResolver.resolveComponentFactory(ChildComponent));
+    this.compRef.instance.age = 99;
+    let subs = this.compRef.instance.vote.subscribe(x => console.log('voted: ' + x));
+    this.compRef.onDestroy(() => {
       subs.unsubscribe();
       console.log('unsub child')
     })
   }
 
   unsub() {
-    this.c.destroy();
+    this.compRef.destroy();
   }
 }

@@ -3,3 +3,22 @@
 
 body {
 }
+
+.wrap-comp {
+  width: 80%;
+  margin: 0 auto;
+
+  .summary {
+    margin: 40px 0;
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .description {
+      margin-top: 20px;
+    }
+  }
+
+}

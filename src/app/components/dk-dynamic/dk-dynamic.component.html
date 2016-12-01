@@ -1,5 +1,8 @@
 <div>dynamic begin</div>
-<button (click)="unsub()">unsub</button><br>
+<div>
+  <button (click)="createChild()" *ngIf="!compRef">create child</button>
+  <button (click)="destroyChild()" *ngIf="compRef">destroy child</button>
+</div>
 <div>dynamic before content</div>
 <ng-content></ng-content>
 <div>dynamic before content</div>

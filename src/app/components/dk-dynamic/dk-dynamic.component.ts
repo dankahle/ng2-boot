@@ -13,17 +13,17 @@ export class DkDynamicComponent {
               private compResolver: ComponentFactoryResolver) {
   }
 
-  ngOnInit() {
+  createChild() {
     this.compRef = this.viewContainer.createComponent(this.compResolver.resolveComponentFactory(ChildComponent));
     this.compRef.instance.age = 99;
     let subs = this.compRef.instance.vote.subscribe(x => console.log('voted: ' + x));
     this.compRef.onDestroy(() => {
       subs.unsubscribe();
-      console.log('unsub child')
     })
   }
 
-  unsub() {
+  destroyChild() {
     this.compRef.destroy();
+    this.compRef = null;
   }
 }

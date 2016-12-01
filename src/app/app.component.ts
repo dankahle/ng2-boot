@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   comps = ['alert', 'modalWithComp'];
-  selectedComp = 'dynamicComp';
+  selectedComp = 'alert';
 
 
 }

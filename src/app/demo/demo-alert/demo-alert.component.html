@@ -1,4 +1,8 @@
+<div class="summary">
+  <div class="title">Alert component</div>
+  <div class="description">
+    Simple dynamic alert using css visibility so content doesn't jump around. The close button you have to wire up to yourself, i.e. they don't do it for you.
+  </div>
+</div>
 
-<ngb-alert #ngbalert [dismissible]="true" type="danger" (close)="close($event)" [style.visibility]="visible">my alert text</ngb-alert>
-
-<button (click)="visible = visible === 'visible'? 'hidden': 'visible'">Show/Hide</button>
+<alert></alert>

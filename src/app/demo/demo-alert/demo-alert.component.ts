@@ -6,13 +6,7 @@ import {Component, OnInit, ApplicationRef} from '@angular/core';
   styleUrls: ['./demo-alert.component.scss']
 })
 export class DemoAlertComponent {
-  visible = 'visible';
 
+  constructor() { }
 
-  constructor(appRef:ApplicationRef) { }
-
-  close(val) {
-    this.visible = 'hidden';
-    console.log('closed alert with val: ', val);
-  }
 }

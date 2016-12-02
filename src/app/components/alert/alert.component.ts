@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertComponent {
   visible = 'visible';
-
-  constructor() { }
+  show = true;
 
   close(val) {
     this.visible = 'hidden';

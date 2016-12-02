@@ -6,6 +6,7 @@ import { DkDynamicComponent } from './dk-dynamic/dk-dynamic.component';
 import { ChildComponent } from './child/child.component';
 import {FormsModule} from "@angular/forms";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { CollapseComponent } from './collapse/collapse.component';
 
 @NgModule({
   imports: [
@@ -13,8 +14,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     FormsModule,
     NgbModule
   ],
-  declarations: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent],
-  exports: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent],
+  declarations: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent],
+  exports: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent],
   entryComponents: [DkModalComponent]
 })
 export class ComponentsModule { }

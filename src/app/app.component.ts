@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  comps = ['alert', 'modalWithComp'];
+  comps = ['alert', 'modalWithComp', 'collapse'];
   selectedComp = 'alert';
 
 

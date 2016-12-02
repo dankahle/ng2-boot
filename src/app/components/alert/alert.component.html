@@ -1,4 +1,10 @@
-<ngb-alert #ngbalert [dismissible]="true" type="danger" (close)="close($event)" [style.visibility]="visible">my alert text</ngb-alert>
+<ngb-alert #ngbalert [dismissible]="true" type="danger" (close)="close($event)" [style.visibility]="visible">
+  <b>basic alert</b> css visibility show/hide
+</ngb-alert>
 
 <button (click)="visible = visible === 'visible'? 'hidden': 'visible'">Show/Hide</button>
-
+<br><br>
+<ngb-alert *ngIf="show">
+  <b>global configured</b> ngIf show/hide
+</ngb-alert>
+<button (click)="show = !show">Show/Hide</button>

@@ -5,6 +5,7 @@ import {DemoModalUsingCompComponent} from "./modal-using-comp/demo-modal-using-c
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { DemoDynamicComponent } from './demo-dynamic/demo-dynamic.component';
 import {ComponentsModule} from "../components/components.module";
+import { DemoCollapseComponent } from './demo-collapse/demo-collapse.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,17 @@ import {ComponentsModule} from "../components/components.module";
     NgbModule,
     ComponentsModule
   ],
-  declarations: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent],
-  exports: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent],
+  declarations: [
+    DemoModalUsingCompComponent,
+    DemoAlertComponent,
+    DemoDynamicComponent,
+    DemoCollapseComponent
+  ],
+  exports: [
+    DemoModalUsingCompComponent,
+    DemoAlertComponent,
+    DemoDynamicComponent,
+    DemoCollapseComponent
+  ],
 })
 export class DemoModule { }

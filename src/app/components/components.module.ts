@@ -7,6 +7,10 @@ import { ChildComponent } from './child/child.component';
 import {FormsModule} from "@angular/forms";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { CollapseComponent } from './collapse/collapse.component';
+import {DemoAlertComponent} from "./demo-alert/demo-alert.component";
+import {DemoModalUsingCompComponent} from "./modal-using-comp/demo-modal-using-comp.component";
+import { DemoDynamicComponent } from './demo-dynamic/demo-dynamic.component';
+import { DemoCollapseComponent } from './demo-collapse/demo-collapse.component';
 
 @NgModule({
   imports: [
@@ -14,8 +18,8 @@ import { CollapseComponent } from './collapse/collapse.component';
     FormsModule,
     NgbModule
   ],
-  declarations: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent],
-  exports: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent],
+  declarations: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
+  exports: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
   entryComponents: [DkModalComponent]
 })
 export class ComponentsModule { }

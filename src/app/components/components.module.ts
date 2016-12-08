@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DkModalComponent} from "./dk-modal/dk-modal.component";
-import { AlertComponent } from './alert/alert.component';
+import { NgAlertComponent } from './ng-alert/ng-alert.component';
 import { DkDynamicComponent } from './dk-dynamic/dk-dynamic.component';
 import { ChildComponent } from './child/child.component';
 import {FormsModule} from "@angular/forms";
@@ -11,6 +11,9 @@ import {DemoAlertComponent} from "./demo-alert/demo-alert.component";
 import {DemoModalUsingCompComponent} from "./modal-using-comp/demo-modal-using-comp.component";
 import { DemoDynamicComponent } from './demo-dynamic/demo-dynamic.component';
 import { DemoCollapseComponent } from './demo-collapse/demo-collapse.component';
+import { Ng2AlertComponent } from './ng2-alert/ng2-alert.component';
+import { DemoComponent } from './demo/demo.component';
+import { DemoChildComponent } from './demo-child/demo-child.component';
 
 @NgModule({
   imports: [
@@ -18,8 +21,8 @@ import { DemoCollapseComponent } from './demo-collapse/demo-collapse.component';
     FormsModule,
     NgbModule
   ],
-  declarations: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
-  exports: [DkModalComponent, AlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
+  declarations: [DkModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, DemoChildComponent],
+  exports: [DkModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, CollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent],
   entryComponents: [DkModalComponent]
 })
 export class ComponentsModule { }

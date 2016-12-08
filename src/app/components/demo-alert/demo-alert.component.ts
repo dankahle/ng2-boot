@@ -1,4 +1,5 @@
-import {Component, OnInit, ApplicationRef} from '@angular/core';
+import {Component, OnInit, ApplicationRef, ViewChild, NgZone} from '@angular/core';
+import {DemoComponent} from "../demo/demo.component";
 
 @Component({
   selector: 'demo-alert',
@@ -6,7 +7,5 @@ import {Component, OnInit, ApplicationRef} from '@angular/core';
   styleUrls: ['./demo-alert.component.scss']
 })
 export class DemoAlertComponent {
-
-  constructor() { }
 
 }

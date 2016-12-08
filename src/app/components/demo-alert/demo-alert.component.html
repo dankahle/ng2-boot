@@ -1,8 +1,15 @@
-<div class="summary">
-  <div class="title">Alert component</div>
-  <div class="description">
-    Simple dynamic alert using css visibility so content doesn't jump around. The close button you have to wire up to yourself, i.e. they don't do it for you. The second version does an ngIf thing as an alternative. They can have globally configured defaults, you set via their NgbAlertConfig service.
-  </div>
-</div>
+<demo
+  title="Alert Component"
+  description="Simple dynamic alert using css visibility so content doesn't jump around. The close button you have to wire up to yourself, i.e. they don't do it for you. The second version does an ngIf thing as an alternative. They can have globally configured defaults, you set via their NgbAlertConfig service.
+"
+>
 
-<alert></alert>
+  <demo-child #ngComp>
+    <ng-alert></ng-alert>
+  </demo-child>
+
+  <demo-child #ng2Comp>
+    <ng2-alert></ng2-alert>
+  </demo-child>
+
+</demo>

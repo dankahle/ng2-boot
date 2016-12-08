@@ -1,0 +1,29 @@
+
+.summary {
+  margin: 40px 0;
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .description {
+    margin-top: 20px;
+  }
+}
+
+.buttons {
+  margin-bottom: 40px;
+
+  button, button:active {
+    outline: none !important;
+  }
+
+  button:first-of-type {
+    margin-right: 13px
+  }
+}
+
+.components {
+
+}

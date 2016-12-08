@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'alert',
-  templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.scss']
+  selector: 'ng-alert',
+  templateUrl: './ng-alert.component.html',
+  styleUrls: ['./ng-alert.component.scss']
 })
-export class AlertComponent {
+export class NgAlertComponent {
   visible = 'visible';
   show = true;
 

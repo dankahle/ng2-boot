@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {DkModalComponent} from "../../components/dk-modal/dk-modal.component";
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
+import {DemoDynamicComponent} from "../demo-dynamic/demo-dynamic.component";
+import {DkModalComponent} from "../../mine/dk-modal/dk-modal.component";
 
 @Component({
   selector: 'demo-modal-using-comp',
@@ -9,7 +10,7 @@ import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
 })
 export class DemoModalUsingCompComponent {
 
-  constructor(private ngbModal: NgbModal) {
+  constructor(private ngbModal: NgbModal, ddc:DemoDynamicComponent) {
   }
 
   openModal() {

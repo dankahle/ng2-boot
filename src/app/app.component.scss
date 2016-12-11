@@ -1,7 +1,15 @@
 
-.wrap-comp {
-  width: 80%;
-  margin: 0 auto;
+.leftnav {
+  padding: 10px;
+  margin-top: 28px;
 
+  .separator {
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
 }
 
+.main {
+  padding: 10px;
+}

@@ -1,3 +1,15 @@
-<p>
-  ng2-alert works!
-</p>
+<div>ng2-alert</div>
+
+<alert dismissOnTimeout="3000">This alert will dismiss in 3s</alert>
+
+<alert #ngbalert [dismissible]="true" type="danger" (close)="close($event)" [style.visibility]="visible">
+   <b>basic alert</b> css visibility show/hide
+</alert>
+
+<button (click)="visible = visible === 'visible'? 'hidden': 'visible'">Show/Hide</button>
+<br><br>
+<alert *ngIf="show">
+   <b>global configured</b> ngIf show/hide
+</alert>
+<button (click)="show = !show">Show/Hide</button>
+

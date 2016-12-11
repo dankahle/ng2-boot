@@ -1,29 +1,41 @@
 <template ngbModalContainer></template> <!--needed for modal-->
 
-<ul class="nav">
-  <li *ngFor="let comp of comps"><a href="javascript:void(0)" (click)="selectedComp = comp">{{comp}}</a> </li>
-</ul>
-<h5> My components</h5>
-<div>Dynamic component:  <a href="javascript:void(0)" (click)="selectedComp = 'dynamicComp'">dynamicComp</a></div>
+<div class="row">
 
-<hr>
-<div class="wrap-comp">
-  <div *ngIf="selectedComp === 'alert'">
-    <demo-alert></demo-alert>
-  </div>
+   <div class="col-sm-2 leftnav">
+      <ul class="nav">
+         <li *ngFor="let comp of comps"><a href="javascript:void(0)" (click)="selectedComp = comp">{{comp}}</a></li>
+      </ul>
 
-  <div *ngIf="selectedComp === 'collapse'">
-    <demo-collapse></demo-collapse>
-  </div>
+      <div><hr class="separator"></div>
 
-  <div *ngIf="selectedComp === 'modalWithComp'">
-    <demo-modal-using-comp></demo-modal-using-comp>
-  </div>
+      <ul class="nav">
+         <li><a href="javascript:void(0)" (click)="selectedComp = 'dynamicComp'">dynamicComp</a></li>
+      </ul>
+   </div>
 
-  <div *ngIf="selectedComp === 'dynamicComp'">
-    <demo-dynamic></demo-dynamic>
-  </div>
+   <div class="col-sm-10 main">
 
+      <div *ngIf="selectedComp === 'alert'">
+         <demo-alert></demo-alert>
+      </div>
+
+      <div *ngIf="selectedComp === 'collapse'">
+         <demo-collapse></demo-collapse>
+      </div>
+
+      <div *ngIf="selectedComp === 'modalWithComp'">
+         <demo-modal-using-comp></demo-modal-using-comp>
+      </div>
+
+      <div *ngIf="selectedComp === 'dynamicComp'">
+         <demo-dynamic></demo-dynamic>
+      </div>
+
+   </div>
 </div>
 
+<main class="main">
 
+
+</main>

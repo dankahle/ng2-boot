@@ -11,6 +11,10 @@ export class ChildComponent {
   count = 0;
   voteVal:boolean = true;
 
+  constructor() {
+    console.log('child const');
+  }
+
   add() {this.count++;}
   sub() {this.count--;}
 

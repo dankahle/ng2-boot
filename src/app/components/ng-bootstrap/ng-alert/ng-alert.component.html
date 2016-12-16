@@ -1,4 +1,6 @@
-<div>ng-alert</div>
+
+<ngb-alert *ngIf="showMe">This alert will dismiss in 3s</ngb-alert>
+
 <ngb-alert #ngbalert [dismissible]="true" type="danger" (close)="close($event)" [style.visibility]="visible">
   <b>basic alert</b> css visibility show/hide
 </ngb-alert>

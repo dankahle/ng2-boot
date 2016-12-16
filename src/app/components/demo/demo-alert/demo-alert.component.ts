@@ -4,7 +4,7 @@ import {DemoComponent} from "../demo/demo.component";
 @Component({
   selector: 'demo-alert',
   templateUrl: './demo-alert.component.html',
-  styleUrls: ['./demo-alert.component.scss']
+  styleUrls: ['../../demo-content.scss', './demo-alert.component.scss']
 })
 export class DemoAlertComponent {
 

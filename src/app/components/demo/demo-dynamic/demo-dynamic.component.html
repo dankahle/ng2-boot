@@ -1,9 +1,10 @@
-<div class="summary">
-  <div class="title">Creating a dynamic component</div>
-  <div class="description">
-    Adding dynamic content utilizes ViewContainerRef.createComponent which returns a ComponentRef which contains and ElementRef and an instance property, the created component, you use to set properties and subscribe to events. The created component becomes a sibling component following directly after its parent.
-  </div>
-</div>
+
+<demo #demo [showButtons]="false">
+   <div class="title">Collapse component</div>
+   <div class="desc">
+      Adding dynamic content utilizes ViewContainerRef.createComponent which returns a ComponentRef which contains and ElementRef and an instance property, the created component, you use to set properties and subscribe to events. The created component becomes a sibling component following directly after its parent.
+   </div>
+</demo>
 
 <dk-dynamic>
   <div>some content in dynamic</div>

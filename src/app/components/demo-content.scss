@@ -1,0 +1,27 @@
+
+/*
+we want demo comp to aggregate content, but transcluded content can't be controlled by demo css (grrrr),
+only by demo-xxx comps, but we want the css to be reusable, belongs in demo. As opposed to pushing this up global
+we'll simply make all demo-xxx just use this.
+ */
+
+.title {
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.desc {
+   margin-top: 20px;
+}
+
+.buttons {
+   margin: 20px 0 38px 0;
+
+   button, button:active {
+      outline: none !important;
+   }
+
+   button:first-of-type {
+      margin-right: 13px
+   }
+}

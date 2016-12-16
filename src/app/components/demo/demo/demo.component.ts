@@ -8,6 +8,8 @@ import {DemoChildComponent} from "../demo-child/demo-child.component";
 })
 export class DemoComponent {
 
+   @Input() showButtons = true;
+
    _showNg = false;
    _showNg2 = false;
 

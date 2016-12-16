@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { DemoChildComponent } from './demo-child.component';
+import { Ng2CollapseComponent } from './ng2-collapse.component';
 
-describe('DemoChildComponent', () => {
-  let component: DemoChildComponent;
-  let fixture: ComponentFixture<DemoChildComponent>;
+describe('Ng2CollapseComponent', () => {
+  let component: Ng2CollapseComponent;
+  let fixture: ComponentFixture<Ng2CollapseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemoChildComponent ]
+      declarations: [ Ng2CollapseComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DemoChildComponent);
+    fixture = TestBed.createComponent(Ng2CollapseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

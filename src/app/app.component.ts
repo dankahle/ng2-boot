@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {bootComps, myComps} from "./core/comps";
+import {comps} from "./core/comps";
+import {CompGroup} from "./core/comp";
 
 @Component({
    selector: 'app-root',
@@ -7,8 +8,8 @@ import {bootComps, myComps} from "./core/comps";
    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-   bootComps = bootComps;
-   myComps = myComps;
+   bootComps = comps.filter(x => x.group === CompGroup.boot);
+   myComps = comps.filter(x => x.group === CompGroup.mine);
    selectedComp:any;
 
 }

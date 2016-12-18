@@ -11,7 +11,7 @@ export class NgAlertComponent {
    showMe = true;
 
    ngOnInit() {
-      setTimeout(() => this.showMe = false, 3000);
+      setTimeout(() => this.showMe = false, 2000);
    }
 
    close(val) {

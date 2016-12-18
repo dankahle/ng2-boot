@@ -2,28 +2,30 @@ import {ComponentFactoryResolver, ViewContainerRef, Component, Input, ComponentR
 import {ChildComponent} from "../child/child.component";
 
 @Component({
-  selector: 'dk-dynamic',
-  templateUrl: './dk-dynamic.component.html',
-  entryComponents: [ChildComponent]
+   selector: 'dk-dynamic',
+   templateUrl: './dk-dynamic.component.html',
+   entryComponents: [ChildComponent]
 })
 export class DkDynamicComponent {
-  private compRef:ComponentRef<ChildComponent>;
+   private compRef: ComponentRef<ChildComponent>;
 
-  constructor(private viewContainer: ViewContainerRef,
-              private compResolver: ComponentFactoryResolver) {
-  }
+   constructor(private viewContainer: ViewContainerRef,
+               private compResolver: ComponentFactoryResolver) {
+   }
 
-  createChild() {
-    this.compRef = this.viewContainer.createComponent(this.compResolver.resolveComponentFactory(ChildComponent));
-    this.compRef.instance.age = 99;
-    let subs = this.compRef.instance.vote.subscribe(x => console.log('voted: ' + x));
-    this.compRef.onDestroy(() => {
-      subs.unsubscribe();
-    })
-  }
+   createChild() {
+      this.compRef = this.viewContainer.createComponent(this.compResolver.resolveComponentFactory(ChildComponent));
+      this.compRef.instance.age = 99;
+      let subs = this.compRef.instance.vote.subscribe(x => console.log('voted: ' + x));
+      this.compRef.onDestroy(() => {
+         console.log('child destroyed');
+         subs.unsubscribe();
+      })
+   }
 
-  destroyChild() {
-    this.compRef.destroy();
-    this.compRef = null;
-  }
+   destroyChild() {
+      this.compRef.destroy();
+      this.viewContainer.clear();
+      this.compRef = null;
+   }
 }

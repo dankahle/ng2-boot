@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {DkModalComponent} from "./mine/dk-modal/dk-modal.component";
 import { NgAlertComponent } from './ng-bootstrap/ng-alert/ng-alert.component';
 import { DkDynamicComponent } from './mine/dk-dynamic/dk-dynamic.component';
 import { ChildComponent } from './mine/child/child.component';
@@ -15,16 +14,18 @@ import { DemoComponent } from './demo/demo/demo.component';
 import {DemoModalUsingCompComponent} from "./demo/demo-modal-using-comp/demo-modal-using-comp.component";
 import { AlertModule, CollapseModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
+import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';
+import {ModalCompComponent} from "./ng-bootstrap/modal-comp/modal-comp.component";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    NgbModule.forRoot(),
+    NgbModule,
     AlertModule, CollapseModule
   ],
-  declarations: [DkModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent],
-  exports: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
-  entryComponents: [DkModalComponent]
+  declarations: [ModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent],
+   exports: [DemoCurrentComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
+  entryComponents: [ModalCompComponent]
 })
 export class ComponentsModule { }

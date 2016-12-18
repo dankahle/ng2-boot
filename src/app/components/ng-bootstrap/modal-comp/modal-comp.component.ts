@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'app-dk-modal',
-  templateUrl: './dk-modal.component.html',
-  styleUrls: ['./dk-modal.component.css']
+  templateUrl: './modal-comp.component.html',
+  styleUrls: ['./modal-comp.component.css']
 })
-export class DkModalComponent {
+export class ModalCompComponent {
   stuff = 'lala';
 
   constructor(private modal:NgbActiveModal) { }

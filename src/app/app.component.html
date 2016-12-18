@@ -3,34 +3,22 @@
 <div class="row">
 
    <div class="col-sm-2 leftnav">
+
       <ul class="nav">
-         <li *ngFor="let comp of comps"><a href="javascript:void(0)" (click)="selectedComp = comp">{{comp}}</a></li>
+         <li *ngFor="let comp of bootComps"><a href="javascript:void(0)" (click)="selectedComp = comp.type">{{comp.name}}</a></li>
       </ul>
 
       <div><hr class="separator"></div>
 
       <ul class="nav">
-         <li><a href="javascript:void(0)" (click)="selectedComp = 'dynamicComp'">dynamicComp</a></li>
+         <li *ngFor="let comp of myComps"><a href="javascript:void(0)" (click)="selectedComp = comp.type">{{comp.name}}</a></li>
       </ul>
+
    </div>
 
    <div class="col-sm-10 main">
 
-      <div *ngIf="selectedComp === 'alert'">
-         <demo-alert></demo-alert>
-      </div>
-
-      <div *ngIf="selectedComp === 'collapse'">
-         <demo-collapse></demo-collapse>
-      </div>
-
-      <div *ngIf="selectedComp === 'modalWithComp'">
-         <demo-modal-using-comp></demo-modal-using-comp>
-      </div>
-
-      <div *ngIf="selectedComp === 'dynamicComp'">
-         <demo-dynamic></demo-dynamic>
-      </div>
+      <demo-current [comp]="selectedComp"></demo-current>
 
    </div>
 </div>

@@ -1,5 +1,4 @@
 import {Component, OnInit, Input, ElementRef, ContentChild, ViewChild, ApplicationRef} from '@angular/core';
-import {DemoChildComponent} from "../demo-child/demo-child.component";
 
 @Component({
    selector: 'demo',

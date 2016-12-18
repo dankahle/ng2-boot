@@ -12,7 +12,7 @@ export class ChildComponent {
   voteVal:boolean = true;
 
   constructor() {
-    console.log('child const');
+    console.log('child created');
   }
 
   add() {this.count++;}
@@ -30,3 +30,4 @@ export class ChildComponent {
   @Output() vote = new EventEmitter<boolean>();
 
 }
+

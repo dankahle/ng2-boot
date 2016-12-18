@@ -14,7 +14,11 @@
   padding: 10px;
 }
 
-
-
-
+/*
+// the only one that worked on ng component modal
+:host /deep/ .modal-content {
+   color: red;
+   background: tan;
+}
+*/
 

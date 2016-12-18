@@ -8,7 +8,8 @@ import {DemoModalUsingCompComponent} from "../components/demo/demo-modal-using-c
 export const comps:Comp[] = [
    {name:'alert', type: DemoAlertComponent, group:CompGroup.boot},
    {name:'collapse', type: DemoCollapseComponent, group:CompGroup.boot},
-   {name:'modal', type: DemoModalUsingCompComponent, group:CompGroup.boot},
+   {name:'modal-comp', type: DemoModalUsingCompComponent, group:CompGroup.boot},
+   {name:'modal-temp', type: DemoModalUsingCompComponent, group:CompGroup.boot},
 
    {name:'dkDynamic', type: DemoDynamicComponent, group:CompGroup.mine}
 ];

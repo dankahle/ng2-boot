@@ -16,6 +16,7 @@ import { AlertModule, CollapseModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
 import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';
 import {ModalCompComponent} from "./ng-bootstrap/modal-comp/modal-comp.component";
+import { ModalTempComponent } from './ng-bootstrap/modal-temp/modal-temp.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import {ModalCompComponent} from "./ng-bootstrap/modal-comp/modal-comp.component
     NgbModule,
     AlertModule, CollapseModule
   ],
-  declarations: [ModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent],
+  declarations: [ModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, ModalTempComponent],
    exports: [DemoCurrentComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
   entryComponents: [ModalCompComponent]
 })

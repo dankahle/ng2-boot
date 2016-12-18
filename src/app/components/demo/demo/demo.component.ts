@@ -7,23 +7,38 @@ import {Component, OnInit, Input, ElementRef, ContentChild, ViewChild, Applicati
 })
 export class DemoComponent {
 
-   @Input() showButtons = true;
+   @Input() hasButtons = true;
+   @Input() hasNg = true;
+   @Input() hasNg2 = true;
+   ngShow = false;
+   ng2Show = false;
 
-   _showNg = false;
-   _showNg2 = false;
+   ngOnInit() {
+      if (this.hasButtons) {
+         if (!this.hasNg) {
+            this.ng2Show = true;
+         }
+         if (!this.hasNg2) {
+            this.ngShow = true;
+         }
+      }
+   }
 
-   get showNg() {
-      return this._showNg;
-   }
-   set showNg(val: boolean) {
-      this._showNg = val;
-   }
-
-   get showNg2() {
-      return this._showNg2;
-   }
-   set showNg2(val: boolean) {
-      this._showNg2 = val;
+   toggle(val) {
+      if (val === 'ng' && this.ngShow) {
+         this.ngShow = false;
+      }
+      else if (val === 'ng2' && this.ng2Show) {
+         this.ng2Show = false;
+      }
+      else if (val === 'ng') {
+         this.ngShow = true;
+         this.ng2Show = false;
+      }
+      else if (val === 'ng2') {
+         this.ngShow = false;
+         this.ng2Show = true;
+      }
    }
 
 }

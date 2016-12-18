@@ -1,9 +1,9 @@
 
 <div>
    <ng-content></ng-content>
-   <div class="no-buttons" *ngIf="!showButtons"></div>
-   <div class="buttons" *ngIf="showButtons">
-      <button (click)="ngShow = true; ng2Show = false;" [class.btn-primary]="ngShow">ng-bootstrap</button>
-      <button (click)="ng2Show = true; ngShow = false;" [class.btn-primary]="ng2Show">ng2-bootstrap</button>
+   <div class="button-space" *ngIf="!hasButtons"></div>
+   <div class="buttons" *ngIf="hasButtons">
+      <button  *ngIf="hasNg" (click)="toggle('ng')" [class.btn-primary]="ngShow">ng-bootstrap</button>
+      <button *ngIf="hasNg2" (click)="toggle('ng2')" [class.btn-primary]="ng2Show">ng2-bootstrap</button>
    </div>
 </div>

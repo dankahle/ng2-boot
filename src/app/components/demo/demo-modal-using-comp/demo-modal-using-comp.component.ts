@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
-import {ModalCompComponent} from "../../ng-bootstrap/modal-comp/modal-comp.component";
+import {NgModalCompComponent} from "../../ng-bootstrap/ng-modal-comp/ng-modal-comp.component";
 
-class ModalOptions {
+export class ModalOptions {
    backdrop:any = true;
    keyboard = true;
    windowClass = '';
@@ -34,8 +34,8 @@ export class DemoModalUsingCompComponent {
    }
 
    openModal() {
-      this.modalRef = this.ngbModal.open(ModalCompComponent, this.options);
-      let dkModalComponent: ModalCompComponent = this.modalRef.componentInstance as ModalCompComponent;
+      this.modalRef = this.ngbModal.open(NgModalCompComponent, this.options);
+      let dkModalComponent: NgModalCompComponent = this.modalRef.componentInstance as NgModalCompComponent;
       this.modalRef.result.then(
          val => {
             console.log('stuff from modal comp:', dkModalComponent.stuff);

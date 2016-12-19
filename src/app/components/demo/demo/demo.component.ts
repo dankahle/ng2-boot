@@ -13,17 +13,6 @@ export class DemoComponent {
    ngShow = false;
    ng2Show = false;
 
-   ngOnInit() {
-      if (this.hasButtons) {
-         if (!this.hasNg) {
-            this.ng2Show = true;
-         }
-         if (!this.hasNg2) {
-            this.ngShow = true;
-         }
-      }
-   }
-
    toggle(val) {
       if (val === 'ng' && this.ngShow) {
          this.ngShow = false;

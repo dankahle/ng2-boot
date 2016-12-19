@@ -12,21 +12,30 @@ import { DemoCollapseComponent } from './demo/demo-collapse/demo-collapse.compon
 import { Ng2AlertComponent } from './ng2-bootstrap/ng2-alert/ng2-alert.component';
 import { DemoComponent } from './demo/demo/demo.component';
 import {DemoModalUsingCompComponent} from "./demo/demo-modal-using-comp/demo-modal-using-comp.component";
-import { AlertModule, CollapseModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AlertModule, CollapseModule, ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
 import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';
-import {ModalCompComponent} from "./ng-bootstrap/modal-comp/modal-comp.component";
-import { ModalTempComponent } from './ng-bootstrap/modal-temp/modal-temp.component';
+import {NgModalCompComponent} from "./ng-bootstrap/ng-modal-comp/ng-modal-comp.component";
+import { DemoModalTempComponent } from './demo/demo-modal-temp/demo-modal-temp.component';
+import {NgModalTempComponent} from "./ng-bootstrap/ng-modal-temp/ng-modal-temp.component";
+import { Ng2ModalTempComponent } from './ng2-bootstrap/ng2-modal-temp/ng2-modal-temp.component';
+import { Ng2ModalTempCompComponent } from './ng2-bootstrap/ng2-modal-temp-comp/ng2-modal-temp-comp.component';
+import { DemoModalTempCompComponent } from './demo/demo-modal-temp-comp/demo-modal-temp-comp.component';
+import {Ng2ModalService} from "./ng2-bootstrap/ng2-modal.service";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule, CollapseModule
+    AlertModule, CollapseModule, ModalModule
   ],
-  declarations: [ModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, ModalTempComponent],
-   exports: [DemoCurrentComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent],
-  entryComponents: [ModalCompComponent]
+  providers: [Ng2ModalService],
+  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent],
+   exports: [DemoCurrentComponent],
+   entryComponents: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalTempComponent,
+     NgModalCompComponent, DemoModalTempCompComponent, Ng2ModalTempCompComponent],
+
 })
 export class ComponentsModule { }

@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.21",
+    "version": "1.0.0-beta.22-1",
     "name": "ng2-boot"
   },
   "apps": [
@@ -18,7 +18,7 @@
       "prefix": "",
       "mobile": false,
       "styles": [
-        "styles.scss",
+        "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css"
       ],
       "scripts": [],
@@ -42,7 +42,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "prefixInterfaces": false,
     "inline": {
       "style": false,

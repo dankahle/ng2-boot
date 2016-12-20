@@ -23,6 +23,10 @@ import { Ng2ModalTempComponent } from './ng2-bootstrap/ng2-modal-temp/ng2-modal-
 import { Ng2ModalTempCompComponent } from './ng2-bootstrap/ng2-modal-temp-comp/ng2-modal-temp-comp.component';
 import { DemoModalTempCompComponent } from './demo/demo-modal-temp-comp/demo-modal-temp-comp.component';
 import {Ng2ModalService} from "./ng2-bootstrap/ng2-modal.service";
+import { DemoModalTempComp2Component } from './demo/demo-modal-temp-comp2/demo-modal-temp-comp2.component';
+import { Ng2ModalTempComp2Component } from './ng2-bootstrap/ng2-modal-temp-comp2/ng2-modal-temp-comp2.component';
+import { Ng2ModalTempCompBaseComponent } from './ng2-bootstrap/ng2-modal-temp-comp-base/ng2-modal-temp-comp-base.component';
+
 
 @NgModule({
   imports: [
@@ -32,7 +36,7 @@ import {Ng2ModalService} from "./ng2-bootstrap/ng2-modal.service";
     AlertModule, CollapseModule, ModalModule
   ],
   providers: [Ng2ModalService],
-  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent],
+  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component, Ng2ModalTempCompBaseComponent],
    exports: [DemoCurrentComponent],
    entryComponents: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalTempComponent,
      NgModalCompComponent, DemoModalTempCompComponent, Ng2ModalTempCompComponent],

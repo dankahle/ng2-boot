@@ -2,7 +2,7 @@
 
 <div class="row">
 
-   <div class="col-sm-2 leftnav">
+   <div class="col-sm-3 leftnav">
 
       <ul class="nav">
          <li *ngFor="let comp of bootComps"><a href="javascript:void(0)" (click)="selectedComp = comp.type">{{comp.name}}</a></li>
@@ -16,7 +16,7 @@
 
    </div>
 
-   <div class="col-sm-10 main">
+   <div class="col-sm-9 main">
 
       <demo-current [comp]="selectedComp"></demo-current>
 

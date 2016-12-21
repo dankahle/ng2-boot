@@ -36,10 +36,10 @@ import { Ng2ModalTempCompBaseComponent } from './ng2-bootstrap/ng2-modal-temp-co
     AlertModule, CollapseModule, ModalModule
   ],
   providers: [Ng2ModalService],
-  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component, Ng2ModalTempCompBaseComponent],
+  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component],
    exports: [DemoCurrentComponent],
    entryComponents: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalTempComponent,
-     NgModalCompComponent, DemoModalTempCompComponent, Ng2ModalTempCompComponent],
+     NgModalCompComponent, DemoModalTempCompComponent, Ng2ModalTempCompComponent, DemoModalTempComp2Component],
 
 })
 export class ComponentsModule { }

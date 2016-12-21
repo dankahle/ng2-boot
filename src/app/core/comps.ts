@@ -5,6 +5,7 @@ import {DemoDynamicComponent} from "../components/demo/demo-dynamic/demo-dynamic
 import {DemoModalUsingCompComponent} from "../components/demo/demo-modal-using-comp/demo-modal-using-comp.component";
 import {DemoModalTempComponent} from "../components/demo/demo-modal-temp/demo-modal-temp.component";
 import {DemoModalTempCompComponent} from "../components/demo/demo-modal-temp-comp/demo-modal-temp-comp.component";
+import {DemoModalTempComp2Component} from "../components/demo/demo-modal-temp-comp2/demo-modal-temp-comp2.component";
 
 export const comps: Comp[] = [
   {name: 'alert', type: DemoAlertComponent, group: CompGroup.boot},
@@ -12,6 +13,9 @@ export const comps: Comp[] = [
   {name: 'modal-comp', type: DemoModalUsingCompComponent, group: CompGroup.boot},
   {name: 'modal-temp', type: DemoModalTempComponent, group: CompGroup.boot},
   {name: 'modal-temp-comp', type: DemoModalTempCompComponent, group: CompGroup.boot},
+  {name: 'modal-temp-comp2', type: DemoModalTempComp2Component, group: CompGroup.boot},
+
+
 
 
   {name: 'dkDynamic', type: DemoDynamicComponent, group: CompGroup.mine}

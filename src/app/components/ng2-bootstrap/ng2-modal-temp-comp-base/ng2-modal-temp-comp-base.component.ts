@@ -1,19 +1,24 @@
-
 import {ModalDirective} from "ng2-bootstrap";
-import {ViewChild} from "@angular/core";
-export class Ng2ModalTempCompBaseComponent  {
+import {ViewChild, Component} from "@angular/core";
 
-  @ViewChild('modal') modal: ModalDirective;
+@Component({
+  selector: 'ng2-modal-temp-comp-base',
+  templateUrl: './ng2-modal-temp-comp-base.component.html',
+  styleUrls: ['./ng2-modal-temp-comp-base.component.scss']
+})
+export class Ng2ModalTempCompBaseComponent {
+  modal: ModalDirective;
   promiseResRej = false;
-  private resResult:Function;
-  private rejResult:Function;
-  result:Promise<any>;
+  private resResult: Function;
+  private rejResult: Function;
+  result: Promise<any>;
 
   constructor() {
     this.init();
   }
 
   ngAfterViewInit() {
+    // if in child will override (won't call both), so have to do user.ngAfterViewInit() in child
     this.modal.onHidden.subscribe(x => {
       if (!this.promiseResRej) {
         this.reject();// don't leave the promise hanging if they hit esc or click on background, reject it
@@ -29,7 +34,7 @@ export class Ng2ModalTempCompBaseComponent  {
     })
   }
 
-  show():Promise<any> {
+  show(): Promise<any> {
     if (!this.modal) {
       return;// modal doesn't exist until view init, if they call it early, do nothing
     }
@@ -52,16 +57,15 @@ export class Ng2ModalTempCompBaseComponent  {
     this.modal.hide();
   }
 
-  resolve(val:any) {
+  resolve(val: any) {
     this.promiseResRej = true;
     this.resResult(val);
   }
 
-  reject(val?:any) {
+  reject(val?: any) {
     this.promiseResRej = true;
     this.rejResult(val);
   }
-
 
 
 }

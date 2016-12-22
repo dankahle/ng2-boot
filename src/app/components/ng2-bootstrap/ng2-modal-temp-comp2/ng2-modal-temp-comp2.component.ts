@@ -1,7 +1,6 @@
-import {Component, OnInit, ViewChild, ApplicationRef, Input, EventEmitter, Output} from '@angular/core';
-import {ModalDirective} from "ng2-bootstrap";
-import {INg2ModalShow, INg2ModalInstance} from '../ng2-modal.service';
+import {Component, ViewChild} from '@angular/core';
 import {Ng2ModalTempCompBaseComponent} from "../ng2-modal-temp-comp-base/ng2-modal-temp-comp-base.component";
+import {ModalDirective} from "ng2-bootstrap";
 
 export class User {
   name:string;
@@ -15,11 +14,11 @@ export class User {
 })
 export class Ng2ModalTempComp2Component extends Ng2ModalTempCompBaseComponent {
   user:User;
+  @ViewChild('modal') modal: ModalDirective;// won't work in parent comp, has to be in comp with template, otherwise we'd want this in parent
 
   init() {
     this.user = new User();
     super.init();
   }
-
 
 }

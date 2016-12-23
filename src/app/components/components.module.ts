@@ -38,7 +38,7 @@ import { Ng2ModalContainerDirective } from './ng2-bootstrap/ng2-modal-container.
   ],
   providers: [Ng2ModalService],
   declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component, Ng2ModalContainerDirective],
-   exports: [DemoCurrentComponent],
+   exports: [DemoCurrentComponent, Ng2ModalContainerDirective],
    entryComponents: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalTempComponent,
      NgModalCompComponent, DemoModalTempCompComponent, Ng2ModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component],
 

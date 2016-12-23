@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {INg2ModalInstance} from "../../ng2-bootstrap/ng2-modal.service";
 import {ModalDirective} from "ng2-bootstrap";
+import {Ng2ModalTempComp2Component} from "../../ng2-bootstrap/ng2-modal-temp-comp2/ng2-modal-temp-comp2.component";
 
 @Component({
   selector: 'demo-modal-temp-comp2',
@@ -9,13 +10,17 @@ import {ModalDirective} from "ng2-bootstrap";
 })
 export class DemoModalTempComp2Component {
   inst:INg2ModalInstance;
-  @ViewChild('modal') modal;
+  @ViewChild('modal') modal:Ng2ModalTempComp2Component;
   modalDirective:ModalDirective;
   hideIn2:boolean;
   testval = '';
 
   ngAfterViewInit() {
-    this.modalDirective = this.modal.modal; // have access to ng2 ModalDirective, but only after view init
+    // you have access to ng2 ModalDirective after view init, but I'm thinking shoujld just interface with the modal,
+    // or maybe jsut the base class? Base would make it consistent, but child modal class would allow for unique capabilities.
+    // I guess the deal is: dealing with the child "is" dealing with the base, just that the child can override when it has
+    // a special need.
+    this.modalDirective = this.modal.modal;
   }
 
   showNg2() {
@@ -23,7 +28,6 @@ export class DemoModalTempComp2Component {
       .then(
         val => {
           this.testval += 'promise';
-          this.modal.dkResult = val
           console.log('success', val)
         },
         err => console.log('reject', err)

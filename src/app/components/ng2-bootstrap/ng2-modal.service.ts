@@ -3,9 +3,10 @@ import {
 } from '@angular/core';
 import {ChildComponent} from "../mine/child/child.component";
 import {ModalDirective} from "ng2-bootstrap";
+import {Ng2ModalTempCompBaseComponent} from "./ng2-modal-temp-comp-base/ng2-modal-temp-comp-base.component";
 
 export interface INg2ModalInstance {
-  modal:ModalDirective
+  modal:any,
   result: Promise<any>;
 }
 
@@ -16,7 +17,7 @@ export interface INg2ModalShow {
 @Injectable()
 export class Ng2ModalService {
   private compRef: ComponentRef<any>;
-  private inst: INg2ModalShow;
+  private inst: Ng2ModalTempCompBaseComponent;
 
   open(type: any,
        viewContainer: ViewContainerRef,
@@ -26,7 +27,7 @@ export class Ng2ModalService {
       viewContainer.clear();
     }
     this.compRef = viewContainer.createComponent(compResolver.resolveComponentFactory(type));
-    this.inst = <INg2ModalShow>this.compRef.instance;
+    this.inst = <Ng2ModalTempCompBaseComponent>this.compRef.instance;
     return this.inst.show();
   }
 

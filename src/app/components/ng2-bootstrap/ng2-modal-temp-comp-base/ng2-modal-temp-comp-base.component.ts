@@ -1,5 +1,6 @@
 import {ModalDirective} from "ng2-bootstrap";
 import {ViewChild, Component} from "@angular/core";
+import {INg2ModalInstance} from "../ng2-modal.service";
 
 @Component({
   selector: 'ng2-modal-temp-comp-base',
@@ -12,18 +13,24 @@ export class Ng2ModalTempCompBaseComponent {
   private resResult: Function;
   private rejResult: Function;
   result: Promise<any>;
+  private resViewInit: Function;
+  private promiseViewInit:Promise<any>;
 
   constructor() {
     this.init();
+    this.promiseViewInit = new Promise((res) => {
+      this.resViewInit = res;
+    })
   }
 
   ngAfterViewInit() {
     // if in child will override (won't call both), so have to do user.ngAfterViewInit() in child
     this.modal.onHidden.subscribe(x => {
       if (!this.promiseResRej) {
-        this.reject();// don't leave the promise hanging if they hit esc or click on background, reject it
+        this.rejResult();// don't leave the promise hanging if they hit esc or click on background, reject it
       }
     });
+    this.resViewInit();
   }
 
   init() {
@@ -34,38 +41,33 @@ export class Ng2ModalTempCompBaseComponent {
     })
   }
 
-  show(): Promise<any> {
-    if (!this.modal) {
-      return;// modal doesn't exist until view init, if they call it early, do nothing
+  show():INg2ModalInstance {
+    this.promiseViewInit
+      .then(() => {
+        this.modal.show();
+      });
+
+    this.init();
+    return {
+      modal: this.modal,
+      result: this.result
     }
-    this.init();// this modal could be reused multiple times, need to init on each show()
-    this.modal.show();
-    return this.result;
   }
 
   submit(val): void {
-    this.resolve(val);// must be before hide, or onHidden will reject promise first
+    this.promiseResRej = true;
+    this.resResult(val);// must be before hide, or onHidden will reject promise first
     this.hide();
   }
 
   cancel(val) {
-    this.reject(val);// must be before hide, or onHidden will reject promise first
+    this.promiseResRej = true;
+    this.rejResult(val);// must be before hide, or onHidden will reject promise first
     this.hide();
   }
 
   hide() {
     this.modal.hide();
   }
-
-  resolve(val: any) {
-    this.promiseResRej = true;
-    this.resResult(val);
-  }
-
-  reject(val?: any) {
-    this.promiseResRej = true;
-    this.rejResult(val);
-  }
-
 
 }

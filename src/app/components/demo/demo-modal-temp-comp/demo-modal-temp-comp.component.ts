@@ -1,6 +1,6 @@
 import {Component, OnInit, ComponentFactoryResolver, ViewContainerRef} from '@angular/core';
 import {Ng2ModalService, INg2ModalInstance} from "../../ng2-bootstrap/ng2-modal.service";
-import {Ng2ModalTempCompComponent} from "../../ng2-bootstrap/ng2-modal-temp-comp/ng2-modal-temp-comp.component";
+import {Ng2ModalTempComp2Component} from "../../ng2-bootstrap/ng2-modal-temp-comp2/ng2-modal-temp-comp2.component";
 
 @Component({
   selector: 'demo-modal-temp-comp',
@@ -16,7 +16,7 @@ export class DemoModalTempCompComponent {
   }
 
   showNg2() {
-    this.inst = this.ng2ModalService.open(Ng2ModalTempCompComponent, this.viewContainer, this.compResolver);
+    this.inst = this.ng2ModalService.open(Ng2ModalTempComp2Component, this.viewContainer, this.compResolver);
     this.inst.result.then(
       resp => console.log('success', resp),
       err => console.log('reject', err)

@@ -10,13 +10,11 @@ import {Ng2ModalTempComp2Component} from "../../ng2-bootstrap/ng2-modal-temp-com
 export class DemoModalTempCompComponent {
   inst:INg2ModalInstance;
 
-  constructor(private viewContainer: ViewContainerRef,
-              private compResolver: ComponentFactoryResolver,
-              private ng2ModalService: Ng2ModalService) {
+  constructor(private ng2ModalService: Ng2ModalService) {
   }
 
   showNg2() {
-    this.inst = this.ng2ModalService.open(Ng2ModalTempComp2Component, this.viewContainer, this.compResolver);
+    this.inst = this.ng2ModalService.open(Ng2ModalTempComp2Component);
     this.inst.result.then(
       resp => console.log('success', resp),
       err => console.log('reject', err)

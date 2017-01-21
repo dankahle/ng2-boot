@@ -1,6 +1,5 @@
 import {ModalDirective} from "ng2-bootstrap";
 import {ViewChild, Component} from "@angular/core";
-import {INg2ModalInstance} from "../ng2-modal.service";
 
 @Component({
   selector: 'ng2-modal-temp-comp-base',
@@ -41,17 +40,14 @@ export class Ng2ModalTempCompBaseComponent {
     })
   }
 
-  show():INg2ModalInstance {
+  show():Promise<any> {
     this.promiseViewInit
       .then(() => {
         this.modal.show();
       });
 
     this.init();
-    return {
-      modal: this.modal,
-      result: this.result
-    }
+    return this.result;
   }
 
   submit(val): void {

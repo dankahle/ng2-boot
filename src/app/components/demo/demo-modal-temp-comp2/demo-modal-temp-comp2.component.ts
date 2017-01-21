@@ -9,7 +9,6 @@ import {Ng2ModalTempComp2Component} from "../../ng2-bootstrap/ng2-modal-temp-com
   styleUrls: ['./demo-modal-temp-comp2.component.css']
 })
 export class DemoModalTempComp2Component {
-  inst:INg2ModalInstance;
   @ViewChild('modal') modal:Ng2ModalTempComp2Component;
   modalDirective:ModalDirective;
   hideIn2:boolean;

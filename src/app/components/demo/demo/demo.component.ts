@@ -1,4 +1,7 @@
-import {Component, OnInit, Input, ElementRef, ContentChild, ViewChild, ApplicationRef} from '@angular/core';
+import {
+  Component, OnInit, Input, ElementRef, ContentChild, ViewChild, ApplicationRef,
+  EventEmitter, Output
+} from '@angular/core';
 
 @Component({
    selector: 'demo',
@@ -12,6 +15,7 @@ export class DemoComponent {
    @Input() hasNg2 = true;
    ngShow = false;
    ng2Show = false;
+   @Output() buttonChange = new EventEmitter<boolean>();
 
    toggle(val) {
       if (val === 'ng' && this.ngShow) {

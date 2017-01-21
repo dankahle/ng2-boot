@@ -1,21 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+import {NgModalBaseComponent} from "../ng-modal-base/ng-modal-base.component";
+
+export class User {
+  name:string;
+  age:number
+}
 
 @Component({
   templateUrl: './ng-modal-comp.component.html',
   styleUrls: ['./ng-modal-comp.component.css']
 })
-export class NgModalCompComponent {
-  stuff = 'lala';
+export class NgModalCompComponent extends NgModalBaseComponent {
+  user:User;
 
-  constructor(private modal:NgbActiveModal) { }
-
-  close(val) {
-    this.modal.close(val);
+  init() {
+    this.user = new User();
+    super.init();
   }
 
-  dismiss(val) {
-    this.modal.dismiss(val);
-  }
+
+
 
 }

@@ -27,6 +27,7 @@ import { DemoModalTempComp2Component } from './demo/demo-modal-temp-comp2/demo-m
 import { Ng2ModalTempComp2Component } from './ng2-bootstrap/ng2-modal-temp-comp2/ng2-modal-temp-comp2.component';
 import { Ng2ModalTempCompBaseComponent } from './ng2-bootstrap/ng2-modal-temp-comp-base/ng2-modal-temp-comp-base.component';
 import { Ng2ModalContainerDirective } from './ng2-bootstrap/ng2-modal-container.directive';
+import { NgModalBaseComponent } from './ng-bootstrap/ng-modal-base/ng-modal-base.component';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { Ng2ModalContainerDirective } from './ng2-bootstrap/ng2-modal-container.
     AlertModule, CollapseModule, ModalModule
   ],
   providers: [Ng2ModalService],
-  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component, Ng2ModalContainerDirective],
+  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, DemoModalTempComponent, NgModalTempComponent, Ng2ModalTempComponent, Ng2ModalTempCompComponent, DemoModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component, Ng2ModalContainerDirective, NgModalBaseComponent],
    exports: [DemoCurrentComponent, Ng2ModalContainerDirective],
    entryComponents: [DemoModalUsingCompComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalTempComponent,
      NgModalCompComponent, DemoModalTempCompComponent, Ng2ModalTempCompComponent, DemoModalTempComp2Component, Ng2ModalTempComp2Component],

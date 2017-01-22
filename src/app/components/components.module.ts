@@ -15,10 +15,7 @@ import { AlertModule, CollapseModule, ModalModule } from 'ng2-bootstrap/ng2-boot
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
 import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';
-import {NgModalCompComponent} from "./ng-bootstrap/ng-modal-comp/ng-modal-comp.component";
-import {NgModalTempComponent} from "./ng-bootstrap/ng-modal-temp/ng-modal-temp.component";
-import {Ng2ModalService} from "./ng2-bootstrap/ng2-modal.service";
-import { Ng2ModalContainerDirective } from './ng2-bootstrap/ng2-modal-container.directive';
+import {NgModalComponent} from "./ng-bootstrap/ng-modal/ng-modal.component";
 import { NgModalBaseComponent } from './ng-bootstrap/ng-modal-base/ng-modal-base.component';
 import {DemoModalComponent} from "./demo/demo-modal/demo-modal.component";
 import {Ng2ModalComponent} from "./ng2-bootstrap/ng2-modal/ng2-modal.component";
@@ -31,11 +28,11 @@ import {Ng2ModalComponent} from "./ng2-bootstrap/ng2-modal/ng2-modal.component";
     NgbModule,
     AlertModule, CollapseModule, ModalModule
   ],
-  providers: [Ng2ModalService],
-  declarations: [NgModalCompComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, NgModalCompComponent, Ng2ModalComponent, Ng2ModalContainerDirective, NgModalBaseComponent],
-   exports: [DemoCurrentComponent, Ng2ModalContainerDirective],
+  providers: [],
+  declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent],
+   exports: [DemoCurrentComponent],
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalCompComponent, Ng2ModalComponent],
+     NgModalComponent, Ng2ModalComponent],
 
 })
 export class ComponentsModule { }

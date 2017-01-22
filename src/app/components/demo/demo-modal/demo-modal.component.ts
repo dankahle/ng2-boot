@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, SimpleChanges, Input} from '@angular/core';
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
-import {NgModalCompComponent} from "../../ng-bootstrap/ng-modal-comp/ng-modal-comp.component";
+import {NgModalComponent} from "../../ng-bootstrap/ng-modal/ng-modal.component";
 import {ModalDirective} from "ng2-bootstrap";
 import * as _ from "lodash";
 import {Ng2ModalComponent} from "../../ng2-bootstrap/ng2-modal/ng2-modal.component";
@@ -99,8 +99,8 @@ export class DemoModalComponent {
   }
 
   openNgModal() {
-    this.modalRef = this.ngbModal.open(NgModalCompComponent, this.options);
-    let modal: NgModalCompComponent = this.modalRef.componentInstance as NgModalCompComponent;
+    this.modalRef = this.ngbModal.open(NgModalComponent, this.options);
+    let modal: NgModalComponent = this.modalRef.componentInstance as NgModalComponent;
     this.modalRef.result.then(
       resp => console.log('success', resp),
       err => console.log('reject', err)

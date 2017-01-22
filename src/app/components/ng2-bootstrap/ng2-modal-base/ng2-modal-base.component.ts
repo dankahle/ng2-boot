@@ -3,10 +3,10 @@ import {ViewChild, Component} from "@angular/core";
 
 @Component({
   selector: 'ng2-modal-temp-comp-base',
-  templateUrl: './ng2-modal-temp-comp-base.component.html',
-  styleUrls: ['./ng2-modal-temp-comp-base.component.scss']
+  templateUrl: './ng2-modal-base.component.html',
+  styleUrls: ['./ng2-modal-base.component.scss']
 })
-export class Ng2ModalTempCompBaseComponent {
+export class Ng2ModalBaseComponent {
   modal: ModalDirective;
   promiseResRej = false;
   private resResult: Function;

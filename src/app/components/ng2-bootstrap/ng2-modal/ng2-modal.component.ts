@@ -1,6 +1,6 @@
 import {Component, ViewChild, Input} from '@angular/core';
-import {Ng2ModalTempCompBaseComponent} from "../ng2-modal-temp-comp-base/ng2-modal-temp-comp-base.component";
 import {ModalDirective, ModalOptions} from "ng2-bootstrap";
+import {Ng2ModalBaseComponent} from "../ng2-modal-base/ng2-modal-base.component";
 
 export class User {
   name:string;
@@ -8,11 +8,11 @@ export class User {
 }
 
 @Component({
-  selector: 'ng2-modal-temp-comp2',
-  templateUrl: './ng2-modal-temp-comp2.component.html',
-  styleUrls: ['./ng2-modal-temp-comp2.component.scss']
+  selector: 'ng2-modal',
+  templateUrl: './ng2-modal.component.html',
+  styleUrls: ['./ng2-modal.component.scss']
 })
-export class Ng2ModalTempComp2Component extends Ng2ModalTempCompBaseComponent {
+export class Ng2ModalComponent extends Ng2ModalBaseComponent {
   user:User;
   _options:ModalOptions;
 

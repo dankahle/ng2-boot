@@ -1,5 +1,5 @@
 import {Component, ComponentFactoryResolver, ViewContainerRef, ComponentRef, Input} from '@angular/core';
-import {DemoModalUsingCompComponent} from "../demo-modal-using-comp/demo-modal-using-comp.component";
+import {DemoModalComponent} from "../demo-modal/demo-modal.component";
 import {DemoAlertComponent} from "../demo-alert/demo-alert.component";
 import {DemoDynamicComponent} from "../demo-dynamic/demo-dynamic.component";
 import {DemoCollapseComponent} from "../demo-collapse/demo-collapse.component";

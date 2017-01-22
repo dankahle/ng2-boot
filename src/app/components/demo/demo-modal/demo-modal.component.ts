@@ -2,8 +2,8 @@ import {Component, OnInit, ViewChild, SimpleChanges, Input} from '@angular/core'
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
 import {NgModalCompComponent} from "../../ng-bootstrap/ng-modal-comp/ng-modal-comp.component";
 import {ModalDirective} from "ng2-bootstrap";
-import {Ng2ModalTempComp2Component} from "../../ng2-bootstrap/ng2-modal-temp-comp2/ng2-modal-temp-comp2.component";
 import * as _ from "lodash";
+import {Ng2ModalComponent} from "../../ng2-bootstrap/ng2-modal/ng2-modal.component";
 
 class ModalOptions {
   backdrop: any = true;
@@ -14,14 +14,14 @@ class ModalOptions {
 
 @Component({
   selector: 'demo-modal-using-comp',
-  templateUrl: './demo-modal-using-comp.component.html',
-  styleUrls: ['./demo-modal-using-comp.component.scss']
+  templateUrl: './demo-modal.component.html',
+  styleUrls: ['./demo-modal.component.scss']
 })
-export class DemoModalUsingCompComponent {
+export class DemoModalComponent {
   @ViewChild('demo') demo;
   options: ModalOptions;
   modalRef: NgbModalRef;
-  @ViewChild('ng2Modal') ng2Modal: Ng2ModalTempComp2Component;
+  @ViewChild('ng2Modal') ng2Modal: Ng2ModalComponent;
   ng2ModalDirective: ModalDirective;
   _backdrop:boolean|string;
   _keyboard:boolean;

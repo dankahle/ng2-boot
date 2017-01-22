@@ -1,7 +1,7 @@
 <demo #demo>
-  <div class="title">Alert Component</div>
+  <div class="title">modal</div>
   <div class="desc">
-    Simple dynamic alert using css visibility so content doesn't jump around. The close button you have to wire up to yourself, i.e. they don't do it for you. The second version does an ngIf thing as an alternative. Ng2 has globally configured defaults, you set via their NgbAlertConfig service.
+    Both have template modals which are useless, but both have capabilities of showing a modal on the fly and receiving an async response. ngmodal takes a size option, but can just put that in the modal template, so not needed. Pushed boilerplate code to a modal base class which simplifies things considerably for ng2modal, but little for ngmodal. There was a lot of work required to get ng2modal up and running like a component. Once done I guess they're somewhat equivalent, but ngmodal's service to open a component modal is by far superior.
   </div>
 </demo>
 

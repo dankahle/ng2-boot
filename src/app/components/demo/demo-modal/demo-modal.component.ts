@@ -15,7 +15,7 @@ class ModalOptions {
 @Component({
   selector: 'demo-modal-using-comp',
   templateUrl: './demo-modal.component.html',
-  styleUrls: ['./demo-modal.component.scss']
+  styleUrls: ['../../demo-content.scss', './demo-modal.component.scss']
 })
 export class DemoModalComponent {
   @ViewChild('demo') demo;

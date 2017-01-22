@@ -27,10 +27,12 @@ export class DemoComponent {
       else if (val === 'ng') {
          this.ngShow = true;
          this.ng2Show = false;
+         this.buttonChange.emit();
       }
       else if (val === 'ng2') {
          this.ngShow = false;
          this.ng2Show = true;
+        this.buttonChange.emit();
       }
    }
 

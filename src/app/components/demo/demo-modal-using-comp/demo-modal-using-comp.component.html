@@ -1,4 +1,3 @@
-
 <demo #demo>
   <div class="title">Alert Component</div>
   <div class="desc">
@@ -12,24 +11,20 @@
     <ul class="list-unstyled">
       <li>
         <span class="prop">backdrop:</span>
-        <label><input type="radio" [(ngModel)]="options.backdrop" [value]="true"> true</label>
-        <label><input type="radio" [(ngModel)]="options.backdrop" [value]="false"> false</label>
-        <label><input type="radio" [(ngModel)]="options.backdrop" [value]="'static'"> static</label>
+        <label><input type="radio" [(ngModel)]="backdrop" name="backdrop" [value]="true"> true</label>
+        <label><input type="radio" [(ngModel)]="backdrop" name="backdrop" [value]="false"> false</label>
+        <label><input type="radio" [(ngModel)]="backdrop" name="backdrop" value="static"> static</label>
       </li>
       <li>
         <span class="prop">keyboard:</span>
-        <label><input type="radio" [(ngModel)]="options.keyboard" [value]="true"> true</label>
-        <label><input type="radio" [(ngModel)]="options.keyboard" [value]="false"> false</label>
+        <label><input type="radio" [(ngModel)]="keyboard" name="keyboard" [value]="true"> true</label>
+        <label><input type="radio" [(ngModel)]="keyboard" name="keyboard" [value]="false"> false</label>
       </li>
-      <li>
+      <li *ngIf="ng2Boot">
         <span class="prop">size:</span>
         <label><input type="radio" [(ngModel)]="options.size" value="sm"> small</label>
         <label><input type="radio" [(ngModel)]="options.size" [value]="undefined"> default</label>
         <label><input type="radio" [(ngModel)]="options.size" value="lg"> large</label>
-      </li>
-      <li>
-        <span class="prop">windowClass:</span>
-        <input [(ngModel)]="options.windowClass" placeholder="Try dankred">
       </li>
 
     </ul>
@@ -39,5 +34,6 @@
   <label><input type="checkbox" [(ngModel)]="options.closeIn2" value="close"> close in 2 sec</label>
 </div>
 
+<ng2-modal-temp-comp2 #ng2Modal [options]="options"></ng2-modal-temp-comp2>
 
 

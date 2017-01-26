@@ -1,0 +1,25 @@
+<demo #demo>
+  <div class="title">accordion</div>
+  <div class="desc">
+  </div>
+</demo>
+
+<div  *ngIf="demo.ngShow || demo.ng2Show">
+
+  <div class="form-group">
+    <label>one panel at a time: <input id="onePanel" type="checkbox" [(ngModel)]="onePanel"></label>
+  </div>
+
+  <div class="form-group">
+    <label>toggle panel:</label>
+    <select [(ngModel)]="selectedPanel" style="width:100px; display: inline-block; margin-right:20px;">
+      <option *ngFor="let panel of panels">{{panel.id}}</option>
+    </select>
+    <button class="btn" (click)="toggle(selectedPanel)">toggle</button><br>
+  </div>
+
+</div>
+<br>
+
+<ng-accordion #ngAccord *ngIf="demo.ngShow" [panels]="panels" [onePanel]="onePanel"></ng-accordion>
+<ng2-accordion #ng2Accord  *ngIf="demo.ng2Show" ></ng2-accordion>

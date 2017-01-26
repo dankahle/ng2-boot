@@ -3,12 +3,11 @@ import {DemoModalComponent} from "../demo-modal/demo-modal.component";
 import {DemoAlertComponent} from "../demo-alert/demo-alert.component";
 import {DemoDynamicComponent} from "../demo-dynamic/demo-dynamic.component";
 import {DemoCollapseComponent} from "../demo-collapse/demo-collapse.component";
-import {NgModalTempComponent} from "../../ng-bootstrap/ng-modal-temp/ng-modal-temp.component";
 
 @Component({
   selector: 'demo-current',
   templateUrl: './demo-current.component.html',
-  styleUrls: ['./demo-current.component.scss']
+  styleUrls: ['../../demo-content.scss', './demo-current.component.scss']
 })
 export class DemoCurrentComponent {
 

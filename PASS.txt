@@ -1,0 +1,5 @@
+
+
+accordion:
+
+done with ng version, now do ng2 version. not sure what else to do besides the "onepanel" and toggle thing. Need to put in a summary text as well

@@ -1,0 +1,6 @@
+
+<ngb-accordion #acc="ngbAccordion" [closeOthers]="onePanel">
+  <ngb-panel *ngFor="let panel of panels" [id]="panel.id" [title]="panel.title">
+    <template ngbPanelContent>{{panel.content}}</template>
+  </ngb-panel>
+</ngb-accordion>

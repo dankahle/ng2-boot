@@ -19,6 +19,9 @@ import {NgModalComponent} from "./ng-bootstrap/ng-modal/ng-modal.component";
 import { NgModalBaseComponent } from './ng-bootstrap/ng-modal-base/ng-modal-base.component';
 import {DemoModalComponent} from "./demo/demo-modal/demo-modal.component";
 import {Ng2ModalComponent} from "./ng2-bootstrap/ng2-modal/ng2-modal.component";
+import { DemoAccordionComponent } from './demo/demo-accordion/demo-accordion.component';
+import { Ng2AccordionComponent } from './ng2-bootstrap/ng2-accordion/ng2-accordion.component';
+import { NgAccordionComponent } from './ng-bootstrap/ng-accordion/ng-accordion.component';
 
 
 @NgModule({
@@ -29,10 +32,13 @@ import {Ng2ModalComponent} from "./ng2-bootstrap/ng2-modal/ng2-modal.component";
     AlertModule, CollapseModule, ModalModule
   ],
   providers: [],
-  declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent, DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent],
+  declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
+    DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
+    DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
+    Ng2AccordionComponent, NgAccordionComponent],
    exports: [DemoCurrentComponent],
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent],
 
 })
 export class ComponentsModule { }

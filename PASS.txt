@@ -2,4 +2,8 @@
 
 accordion:
 
-see if you can control the toggle via isOpen or something, as this can be put on th data instead of the other route
+
+* you don't have panel background and css happening locally, but they do in demo, but can't see whta the difference is. Is there some css file you're supposed to have? Is there's boot3 and you're using boot4? No, you simply don't see the card class that they have in their demo. Why not?
+
+* you want to see how ng2 is getting component access via template vars "without the exportAs requirement". I.e. they use template var to get it. Oh... is htat the trick? I.e. if you templatevar "in the template" you get the directive, BUT... if you try to viewchild it using that var, you can't get the component UNLESS IT'S EXPORTAS???? that would be good to know. At least you can get it in one place I suppose. figure this out and blog on it.
+

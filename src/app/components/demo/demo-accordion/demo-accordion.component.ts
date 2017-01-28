@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 export class Panel {
   id:string;
   disabled:boolean;
+  isOpen:boolean;
   title:string;
   content:string;
 }
@@ -12,7 +13,7 @@ export class Panel {
 @Component({
   selector: 'demo-accordion',
   templateUrl: './demo-accordion.component.html',
-  styleUrls: ['./demo-accordion.component.css']
+  styleUrls: ['../../demo-content.scss', './demo-accordion.component.css']
 })
 export class DemoAccordionComponent {
   onePanel:boolean;
@@ -27,7 +28,6 @@ export class DemoAccordionComponent {
   }
 
   init() {
-    console.log('init');
     this.onePanel = false;
     this.selectedPanel = 'one';
   }
@@ -57,7 +57,8 @@ export class DemoAccordionComponent {
       this.ngAccord.toggle(id);
     }
     else if (this.ng2Accord) {
-      this.ng2Accord.toggle(id);
+      let panel:Panel = _.find(this.panels, {id: id});
+      panel.isOpen = !panel.isOpen;
     }
   }
 
@@ -71,18 +72,21 @@ export class DemoAccordionComponent {
     {
       id: 'one',
       disabled: false,
+      isOpen: false,
       title: 'title one',
       content: 'Lorem1 ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.'
     },
     {
       id: 'two',
       disabled: false,
+      isOpen: false,
       title: 'title two',
       content: 'Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.'
     },
     {
       id: 'three',
       disabled: false,
+      isOpen: false,
       title: 'title three',
       content: 'Lorem3 ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.'
     },

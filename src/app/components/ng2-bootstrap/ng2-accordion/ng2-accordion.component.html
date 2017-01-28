@@ -1,8 +1,27 @@
 
-<!--
-<accordion #acc="ngbAccordion" [closeOthers]="onePanel">
-  <accordion-panel *ngFor="let panel of panels" [id]="panel.id" [heading]="panel.title">
-    <template ngbPanelContent>{{panel.content}}</template>
-  </accordion-panel>
+<accordion #acc [closeOthers]="onePanel">
+  <accordion-group *ngFor="let panel of panels" [id]="panel.id" [heading]="panel.title" [isDisabled]="panel.disabled" [isOpen]="panel.isOpen">
+    {{panel.content}}
+  </accordion-group>
 </accordion>
--->
+
+
+<accordion>
+  <accordion-group heading="Static Header, initially expanded">
+    This content is straight in the template.
+  </accordion-group>
+  <accordion-group #group>
+    <div accordion-heading>
+      I can have markup, too!
+      <i class="pull-right float-xs-right glyphicon"
+         [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+    </div>
+    This is just some content to illustrate fancy headings.
+  </accordion-group>
+  <accordion-group heading="Content 1">
+    <p>Content 1</p>
+  </accordion-group>
+  <accordion-group heading="Content 2">
+    <p>Content 2</p>
+  </accordion-group>
+</accordion>

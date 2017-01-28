@@ -4,7 +4,7 @@ https://github.com/valor-software/ng2-bootstrap/issues/986#issuecomment-26229319
 
 For me only your solution works. Its also the easiest patch for now.
 
-Just to clarify for others, copy/paste the following in your main component (appComponent)
+Just to clarify for others, copy/paste the following in your main component (appComponent) before the component
 
 import { ComponentsHelper } from 'ng2-bootstrap/ng2-bootstrap'
 

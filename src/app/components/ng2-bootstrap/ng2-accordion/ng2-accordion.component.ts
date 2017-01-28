@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, ViewChild} from '@angular/core';
-import {DemoAccordionComponent} from "../../demo/demo-accordion/demo-accordion.component";
+import {DemoAccordionComponent, Panel} from "../../demo/demo-accordion/demo-accordion.component";
 
 @Component({
   selector: 'ng2-accordion',
@@ -7,14 +7,12 @@ import {DemoAccordionComponent} from "../../demo/demo-accordion/demo-accordion.c
   styleUrls: ['./ng2-accordion.component.css']
 })
 export class Ng2AccordionComponent {
-/*
-  @Input() panels:Object[];
+  @Input() panels:Panel[];
   @Input() onePanel:boolean;
   @ViewChild('acc') accord;
 
   toggle(id) {
     this.accord.toggle(id);
   }
-*/
 
 }

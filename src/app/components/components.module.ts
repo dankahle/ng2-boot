@@ -29,7 +29,7 @@ import { NgAccordionComponent } from './ng-bootstrap/ng-accordion/ng-accordion.c
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule, CollapseModule, ModalModule
+    AlertModule, CollapseModule, ModalModule, AccordionModule
   ],
   providers: [],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,

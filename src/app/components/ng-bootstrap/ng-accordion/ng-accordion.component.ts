@@ -1,5 +1,7 @@
-import {Component, OnInit, Input, ViewChild} from '@angular/core';
-import {DemoAccordionComponent} from "../../demo/demo-accordion/demo-accordion.component";
+import {Component, OnInit, Input, ViewChild, ViewChildren} from '@angular/core';
+import {DemoAccordionComponent, Panel} from "../../demo/demo-accordion/demo-accordion.component";
+import * as _ from 'lodash';
+import {NgbPanel, NgbAccordion} from "@ng-bootstrap/ng-bootstrap/accordion/accordion";
 
 @Component({
   selector: 'ng-accordion',
@@ -7,9 +9,9 @@ import {DemoAccordionComponent} from "../../demo/demo-accordion/demo-accordion.c
   styleUrls: ['./ng-accordion.component.css']
 })
 export class NgAccordionComponent {
-  @Input() panels;
-  @Input() onePanel;
-  @ViewChild('acc') accord;
+  @Input() panels:Panel[];
+  @Input() onePanel:boolean;
+  @ViewChild('acc') accord:NgbAccordion;
 
 /*
   // this works fine, but parent using viewChild and calling child.toggle() is cleaner
@@ -20,10 +22,6 @@ export class NgAccordionComponent {
 
   toggle(id) {
       this.accord.toggle(id);
-  }
-
-  onDemoButtonChange() {
-    this.onePanel = false;
   }
 
 }

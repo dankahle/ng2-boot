@@ -2,4 +2,4 @@
 
 accordion:
 
-done with ng version, now do ng2 version. not sure what else to do besides the "onepanel" and toggle thing. Need to put in a summary text as well
+see if you can control the toggle via isOpen or something, as this can be put on th data instead of the other route

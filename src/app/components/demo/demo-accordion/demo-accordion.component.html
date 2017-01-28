@@ -1,6 +1,7 @@
 <demo #demo>
   <div class="title">accordion</div>
   <div class="desc">
+    ng you have to click link to open/close whereas ng2, whole div opens/closes (better).
   </div>
 </demo>
 
@@ -15,11 +16,15 @@
     <select [(ngModel)]="selectedPanel" style="width:100px; display: inline-block; margin-right:20px;">
       <option *ngFor="let panel of panels">{{panel.id}}</option>
     </select>
-    <button class="btn" (click)="toggle(selectedPanel)">toggle</button><br>
+    <button class="btn" (click)="toggle(selectedPanel)">toggle</button>
+    <button class="btn" (click)="disable(selectedPanel)">enable/disable</button>
+    <br>
   </div>
 
 </div>
 <br>
 
 <ng-accordion #ngAccord *ngIf="demo.ngShow" [panels]="panels" [onePanel]="onePanel"></ng-accordion>
-<ng2-accordion #ng2Accord  *ngIf="demo.ng2Show" ></ng2-accordion>
+<!--
+<ng2-accordion #ng2Accord  *ngIf="demo.ng2Show" [onePanel]="onePanel"></ng2-accordion>
+-->

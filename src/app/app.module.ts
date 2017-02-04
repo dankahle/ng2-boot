@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 import {ComponentsModule} from "./components/components.module";
 import {CoreModule} from "./core/core.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import {AlertModule} from "ng2-bootstrap";
+import {AccordionModule} from "ng2-bootstrap";
 
 @NgModule({
    declarations: [
@@ -19,7 +19,7 @@ import {AlertModule} from "ng2-bootstrap";
       HttpModule,
       NgbModule.forRoot(),
       ComponentsModule,
-      CoreModule,
+      CoreModule
    ],
    providers: [],
    bootstrap: [AppComponent]

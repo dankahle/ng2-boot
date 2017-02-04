@@ -13,9 +13,10 @@ export class Panel {
 @Component({
   selector: 'demo-accordion',
   templateUrl: './demo-accordion.component.html',
-  styleUrls: ['../../demo-content.scss', './demo-accordion.component.css']
+  styleUrls: ['../../demo-content.scss', './demo-accordion.component.scss']
 })
 export class DemoAccordionComponent {
+  panels:Panel[] = [];
   onePanel:boolean;
   selectedPanel:string;
   @ViewChild('demo') demo;
@@ -30,6 +31,7 @@ export class DemoAccordionComponent {
   init() {
     this.onePanel = false;
     this.selectedPanel = 'one';
+    this.panels = _.cloneDeep(this._panels);
   }
 
   onDemoButtonChange() {
@@ -58,7 +60,14 @@ export class DemoAccordionComponent {
     }
     else if (this.ng2Accord) {
       let panel:Panel = _.find(this.panels, {id: id});
-      panel.isOpen = !panel.isOpen;
+      // ng2 allows toggling of disabled panels via isOpen
+      if (!panel.disabled) {
+        // ng2 crashes if you use isOpen to open > 1 panels and closeOthers is true, so we'll closeOthers here
+        if (!panel.isOpen) {
+          this.panels.forEach(x => x.isOpen = false);
+        }
+        panel.isOpen = !panel.isOpen;
+      }
     }
   }
 
@@ -68,7 +77,7 @@ export class DemoAccordionComponent {
   }
 
 
-  panels = [
+  _panels = [
     {
       id: 'one',
       disabled: false,

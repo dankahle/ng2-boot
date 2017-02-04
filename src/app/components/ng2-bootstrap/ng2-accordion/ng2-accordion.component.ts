@@ -4,15 +4,12 @@ import {DemoAccordionComponent, Panel} from "../../demo/demo-accordion/demo-acco
 @Component({
   selector: 'ng2-accordion',
   templateUrl: './ng2-accordion.component.html',
-  styleUrls: ['./ng2-accordion.component.css']
+  styleUrls: ['./ng2-accordion.component.scss']
 })
 export class Ng2AccordionComponent {
   @Input() panels:Panel[];
   @Input() onePanel:boolean;
   @ViewChild('acc') accord;
 
-  toggle(id) {
-    this.accord.toggle(id);
-  }
 
 }

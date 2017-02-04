@@ -6,7 +6,7 @@ import {NgbPanel, NgbAccordion} from "@ng-bootstrap/ng-bootstrap/accordion/accor
 @Component({
   selector: 'ng-accordion',
   templateUrl: './ng-accordion.component.html',
-  styleUrls: ['./ng-accordion.component.css']
+  styleUrls: ['./ng-accordion.component.scss']
 })
 export class NgAccordionComponent {
   @Input() panels:Panel[];

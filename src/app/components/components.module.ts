@@ -11,7 +11,7 @@ import { DemoDynamicComponent } from './demo/demo-dynamic/demo-dynamic.component
 import { DemoCollapseComponent } from './demo/demo-collapse/demo-collapse.component';
 import { Ng2AlertComponent } from './ng2-bootstrap/ng2-alert/ng2-alert.component';
 import { DemoComponent } from './demo/demo/demo.component';
-import { AlertModule, CollapseModule, ModalModule, AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AlertModule, CollapseModule, ModalModule, AccordionModule } from 'ng2-bootstrap';
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
 import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';
@@ -22,6 +22,9 @@ import {Ng2ModalComponent} from "./ng2-bootstrap/ng2-modal/ng2-modal.component";
 import { DemoAccordionComponent } from './demo/demo-accordion/demo-accordion.component';
 import { Ng2AccordionComponent } from './ng2-bootstrap/ng2-accordion/ng2-accordion.component';
 import { NgAccordionComponent } from './ng-bootstrap/ng-accordion/ng-accordion.component';
+import { DemoButtonsComponent } from './demo/demo-buttons/demo-buttons.component';
+import { Ng2ButtonsComponent } from './ng2-bootstrap/ng2-buttons/ng2-buttons.component';
+import { NgButtonsComponent } from './ng-bootstrap/ng-buttons/ng-buttons.component';
 
 
 @NgModule({
@@ -29,16 +32,16 @@ import { NgAccordionComponent } from './ng-bootstrap/ng-accordion/ng-accordion.c
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule, CollapseModule, ModalModule, AccordionModule
+    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot()
   ],
   providers: [],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent],
    exports: [DemoCurrentComponent],
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent],
 
 })
 export class ComponentsModule { }

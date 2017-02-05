@@ -1,3 +1,46 @@
+
+<br>
+<div style="display:inline-block; margin-right:40px">
+  <h6>boolean toggle</h6>
+  <button type="button" class="btn btn-primary"
+          [(ngModel)]="booleanToggle" btnCheckbox>
+    Boolean Toggle
+  </button>
+  <pre>booleanToggle: {{booleanToggle}}</pre>
+</div>
+
+<div style="display:inline-block">
+  <h6>string toggle</h6>
+  <button type="button" class="btn btn-primary"
+          [(ngModel)]="stringToggle" btnCheckbox
+          btnCheckboxTrue="trueVal" btnCheckboxFalse="falseVal"  [disabled]="disabled">
+    String Toggle
+  </button>
+  <label>disabled: <input type="checkbox" [(ngModel)]="disabled"></label>
+  <pre>stringToggle: {{stringToggle}}</pre>
+</div>
+<br><br>
+
+<h6>radio button group</h6>
+<small>can use uncheckable input to make radios unset the model</small>
+<div class="btn-group">
+  <label class="btn btn-success" [(ngModel)]="radioVal" btnRadio="Left">Left</label>
+  <label class="btn btn-success" [(ngModel)]="radioVal" btnRadio="Middle"
+         uncheckable>Middle</label>
+  <label class="btn btn-success" [(ngModel)]="radioVal" btnRadio="Right"
+         uncheckable>Right</label>
+</div>
+<pre>radio val: {{radioVal}}</pre>
+<br><br>
+
+<h6>checkbox button group</h6>
 <p>
-  ng2-buttons works!
+  <small>ng doesn't have a checkbox directive as it can be done with angular, but ng2 has one</small>
 </p>
+<div class="btn-group">
+  <label class="btn btn-primary" [(ngModel)]="checkVals.left"
+         btnCheckbox>Left</label>
+  <label class="btn btn-primary" [(ngModel)]="checkVals.middle" btnCheckbox>Middle</label>
+  <label class="btn btn-primary" [(ngModel)]="checkVals.right" btnCheckbox>Right</label>
+</div>
+<pre>check vals: {{checkVals | json}}</pre>

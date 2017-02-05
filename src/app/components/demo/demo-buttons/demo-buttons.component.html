@@ -2,6 +2,7 @@
 <demo #demo>
   <div class="title">buttons</div>
   <div class="desc">
+    ng2 has a checkbox group that ng didn't think was needed as can be done via angular, but ng2 allows you to set strings to the checked values instead of just booleans. Also, the ng2 radios have a "uncheckable" input that allows you to "unset" the model if the radio's already chosen. That's not standard, but may be useful? Not sure as boot buttons are always dark when hovering so won't know it's unchosen anyway, even when you uncheck it, unless there's something else on the screen to show that. There's something wrong with the ng2 string toggle when you try to disable it. Doesn't get "disabled" attribute, so never looks disabled, even though it acts like it. Gets "ng-reflect-is-disabled="true", whatever that is. Disables it in action, but not with the boot classes you'd expect to see.
   </div>
 </demo>
 <ng-buttons *ngIf="demo.ngShow"></ng-buttons>

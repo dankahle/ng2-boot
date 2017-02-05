@@ -15,6 +15,7 @@ export class DemoComponent {
    @Input() hasNg2 = true;
    ngShow = false;
    ng2Show = false;
+   shown = false;
    @Output() buttonChange = new EventEmitter<boolean>();
 
    toggle(val) {
@@ -33,6 +34,13 @@ export class DemoComponent {
          this.ngShow = false;
          this.ng2Show = true;
         this.buttonChange.emit();
+      }
+
+      if(this.ngShow || this.ng2Show) {
+        this.shown = true;
+      }
+      else {
+        this.shown = false;
       }
    }
 

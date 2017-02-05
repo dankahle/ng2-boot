@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ng2-buttons.component.html',
   styleUrls: ['./ng2-buttons.component.scss']
 })
-export class Ng2ButtonsComponent implements OnInit {
+export class Ng2ButtonsComponent {
 
-  constructor() { }
+  booleanToggle = true;
+  stringToggle = 'trueVal';
 
-  ngOnInit() {
+  radioVal = 'middle';
+
+  checkVals = {
+    left: false,
+    middle: true,
+    right: false
   }
 
 }

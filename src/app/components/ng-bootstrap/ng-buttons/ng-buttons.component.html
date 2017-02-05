@@ -1,3 +1,55 @@
+
+<br>
+<div style="display:inline-block; margin-right:40px">
+  <h6>boolean toggle</h6>
+  <button type="button" class="btn btn-primary" [class.active]="booleanToggle"
+          (click)="booleanToggle = !booleanToggle" >
+    Boolean Toggle
+  </button>
+  <pre>booleanToggle: {{booleanToggle}}</pre>
+</div>
+
+<div style="display:inline-block">
+  <h6>string toggle</h6>
+  <button type="button" class="btn btn-primary" [class.active]="stringToggleVal==='trueVal'" [disabled]="disabled"
+          (click)="stringToggle()">
+    String Toggle
+  </button>
+  <label>disabled: <input type="checkbox" [(ngModel)]="disabled"></label>
+  <pre>stringToggle: {{stringToggleVal}}</pre>
+</div>
+<br><br>
+
+<h6>radio button group</h6>
+<div [(ngModel)]="radioVal" ngbRadioGroup name="radioBasic">
+  <label class="btn btn-primary">
+    <input type="radio" value="left"> Left
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" value="middle"> Middle (pre-checked)
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" [value]="'right'"> Right
+  </label>
+</div>
+<pre>radio val: {{radioVal}}</pre>
+
+<br><br>
+
+<h6>checkbox button group</h6>
 <p>
-  ng-buttons works!
+  <small>Check-box-like button group can be easily done with pure Angular, no custom directives necessary.
+    But we include demo here for completeness.</small>
 </p>
+<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary" [class.active]="checkVals.left">
+    <input type="checkbox" [(ngModel)]="checkVals.left"> Left (pre-checked)
+  </label>
+  <label class="btn btn-primary" [class.active]="checkVals.middle">
+    <input type="checkbox" [(ngModel)]="checkVals.middle"> Middle
+  </label>
+  <label class="btn btn-primary" [class.active]="checkVals.right">
+    <input type="checkbox" [(ngModel)]="checkVals.right"> Right
+  </label>
+</div>
+<pre>check vals: {{checkVals | json}}</pre>

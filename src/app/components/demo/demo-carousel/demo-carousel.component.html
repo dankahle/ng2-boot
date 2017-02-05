@@ -1,0 +1,17 @@
+
+<demo #demo>
+  <div class="title">carousel</div>
+  <div class="desc">
+  </div>
+</demo>
+<div [hidden]="!demo.shown">
+  <label>wrap: <input type="checkbox" [(ngModel)]="wrap" style="margin-right:20px;"></label>
+  <button class="btn" (click)="pause()">pause</button>
+  <button class="btn" (click)="restart()">restart</button>
+  <button class="btn" (click)="select('2')">select 2nd pic</button>
+  <br>
+
+  <br><br>
+</div>
+<ng-carousel #ngCarousel="ngCarousel" *ngIf="demo.ngShow" [wrap]="wrap"></ng-carousel>
+<ng2-carousel *ngIf="demo.ng2Show"></ng2-carousel>

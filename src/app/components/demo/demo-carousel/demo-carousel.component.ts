@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {DemoComponent} from "../demo/demo.component";
 import {NgCarouselComponent} from "../../ng-bootstrap/ng-carousel/ng-carousel.component";
+import {Ng2CarouselComponent} from "../../ng2-bootstrap/ng2-carousel/ng2-carousel.component";
 
 @Component({
   selector: 'demo-carousel',
@@ -10,11 +11,13 @@ import {NgCarouselComponent} from "../../ng-bootstrap/ng-carousel/ng-carousel.co
 export class DemoCarouselComponent {
   @ViewChild('demo') demo:DemoComponent;
   @ViewChild('ngCarousel') ngCarousel:NgCarouselComponent;
-
-  repeat = false;
+  @ViewChild('ng2Carousel') ng2Carousel:Ng2CarouselComponent;
+  wrap = false;
+  noPause = false;
 
   init() {
-    this.repeat = false;
+    this.wrap = false;
+    this.noPause = false;
   }
 
   ngAfterViewInit() {
@@ -37,9 +40,12 @@ export class DemoCarouselComponent {
     }
   }
 
-  select(val) {
+  select2nd() {
     if (this.ngCarousel) {
-      this.ngCarousel.select(val);
+      this.ngCarousel.select('2');
+    }
+    else if (this.ng2Carousel) {
+      this.ng2Carousel.activeSlide = 1;
     }
   }
 

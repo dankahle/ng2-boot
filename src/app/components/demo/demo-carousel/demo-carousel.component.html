@@ -2,16 +2,23 @@
 <demo #demo>
   <div class="title">carousel</div>
   <div class="desc">
+    ng carousel has more control with pause/cycle/select methods whereas ng2 has no pause/start method, only an activeSlide method. ng2 has noPause ability so pic continues on hover, whereas ng always pauses.
   </div>
 </demo>
 <div [hidden]="!demo.shown">
   <label>wrap: <input type="checkbox" [(ngModel)]="wrap" style="margin-right:20px;"></label>
-  <button class="btn" (click)="pause()">pause</button>
-  <button class="btn" (click)="restart()">restart</button>
-  <button class="btn" (click)="select('2')">select 2nd pic</button>
+  <span *ngIf="demo.ngShow">
+    <button class="btn" (click)="pause()">pause</button>
+    <button class="btn" (click)="restart()">restart</button>
+  </span>
+  <span *ngIf="demo.ng2Show">
+    <label>no pause: <input type="checkbox" [(ngModel)]="noPause"></label>
+  </span>
+
+  <button class="btn" (click)="select2nd()">select 2nd pic</button>
   <br>
 
   <br><br>
 </div>
 <ng-carousel #ngCarousel="ngCarousel" *ngIf="demo.ngShow" [wrap]="wrap"></ng-carousel>
-<ng2-carousel *ngIf="demo.ng2Show"></ng2-carousel>
+<ng2-carousel #ng2Carousel="ng2Carousel" *ngIf="demo.ng2Show" [wrap]="!!wrap" [noPause]="noPause"></ng2-carousel>

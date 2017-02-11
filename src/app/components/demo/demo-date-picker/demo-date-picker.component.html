@@ -4,5 +4,10 @@
   <div class="desc">
   </div>
 </demo>
-<ng-date-picker *ngIf="demo.ngShow"></ng-date-picker>
+
+<div class="dk-settings" *ngIf="demo.shown">
+  <span class="prop">limit to today or later</span> <input type="checkbox" [(ngModel)]="todayOrLater">
+</div>
+
+<ng-date-picker *ngIf="demo.ngShow" [minDate]="minDate" ></ng-date-picker>
 <ng2-date-picker  *ngIf="demo.ng2Show"></ng2-date-picker>

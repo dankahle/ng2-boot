@@ -5,33 +5,33 @@
   </div>
 </demo>
 
-<div  *ngIf="demo.ngShow || demo.ng2Show">
+<div class="dk-settings" *ngIf="demo.ngShow || demo.ng2Show">
   <fieldset>
     <legend>options</legend>
     <ul class="list-unstyled">
       <li>
         <span class="prop">backdrop:</span>
-        <label><input type="radio" [(ngModel)]="backdrop" name="backdrop" [value]="true"> true</label>
-        <label><input type="radio" [(ngModel)]="backdrop" name="backdrop" [value]="false"> false</label>
-        <label><input type="radio" [(ngModel)]="backdrop" name="backdrop" value="static"> static</label>
+        <label class="inline"><input type="radio" [(ngModel)]="backdrop" name="backdrop" [value]="true"> true</label>
+        <label class="inline"><input type="radio" [(ngModel)]="backdrop" name="backdrop" [value]="false"> false</label>
+        <label class="inline"><input type="radio" [(ngModel)]="backdrop" name="backdrop" value="static"> static</label>
       </li>
       <li>
         <span class="prop">keyboard:</span>
-        <label><input type="radio" [(ngModel)]="keyboard" name="keyboard" [value]="true"> true</label>
-        <label><input type="radio" [(ngModel)]="keyboard" name="keyboard" [value]="false"> false</label>
+        <label class="inline"><input type="radio" [(ngModel)]="keyboard" name="keyboard" [value]="true"> true</label>
+        <label class="inline"><input type="radio" [(ngModel)]="keyboard" name="keyboard" [value]="false"> false</label>
       </li>
       <li *ngIf="demo.ngShow">
         <span class="prop">size:</span>
-        <label><input type="radio" [(ngModel)]="options.size" value="sm"> small</label>
-        <label><input type="radio" [(ngModel)]="options.size" [value]="undefined"> default</label>
-        <label><input type="radio" [(ngModel)]="options.size" value="lg"> large</label>
+        <label class="inline"><input type="radio" [(ngModel)]="options.size" value="sm"> small</label>
+        <label class="inline"><input type="radio" [(ngModel)]="options.size" [value]="undefined"> default</label>
+        <label class="inline"><input type="radio" [(ngModel)]="options.size" value="lg"> large</label>
       </li>
 
     </ul>
   </fieldset>
 
   <span class="prop"><button (click)="openModal()">open modal</button></span>
-  <label><input type="checkbox" [(ngModel)]="options.closeIn2" value="close"> close in 2 sec</label>
+  <label class="inline"><input type="checkbox" [(ngModel)]="options.closeIn2" value="close"> close in 2 sec</label>
 </div>
 
 <ng2-modal #ng2Modal [options]="options"></ng2-modal>

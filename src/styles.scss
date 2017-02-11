@@ -4,12 +4,31 @@ body {
   padding-top: 10px;
 }
 
+.github {
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  font-size: 40px;
+  z-index: 100;
+}
+
 .outline {
   outline: 1px solid;
   outline-offset: -1px;
 }
 
+.dk-settings {
+  margin-bottom: 38px;
 
+  .prop {
+    display: inline-block;
+    min-width: 140px;
+  }
 
+  .inline {
+    margin-right: 20px;
+  }
+
+}
 
 

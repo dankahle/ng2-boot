@@ -1,7 +1,9 @@
 
 
 just starting ng datepicker
+looking at the ng one now
 
-you needed font-awesome, but didn't like hte way ng put the whole file in the style tag. Shoudl just use css imports right? I guess then the page browser has to GET that file and that just takes more time. Is it better to put it in angular-cli.json and have ng put it in the head instead of browser get it? Hmm. Seems to me, waiting for ng is too late. Let the browser handle it, maybe it does it in parallel then. Maybe ng does too though. who knows. Hard to tell which way to go.
+MODAL'S BROKEN. What?? both of them. The ng one is missing the modal prop and calling modal.close() in the base class on undefined. What. Anyway you were gonna look at github history and decided you needed to put a github icon on the page. Done. So now need to fix the modal and get back to ng datepicker.
+
 
 

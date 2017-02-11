@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './demo-date-picker.component.html',
   styleUrls: ['./demo-date-picker.component.scss']
 })
-export class DemoDatePickerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class DemoDatePickerComponent {
+  minDate:Date;
+  set todayOrLater(val) {
+    console.log('todayorlater set', val);
+    if (val) {
+      this.minDate = new Date();
+    }
+    else {
+      this.minDate = undefined;
+    }
   }
+
 
 }

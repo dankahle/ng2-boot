@@ -2,7 +2,8 @@
   <div class="form-group">
     <div class="input-group">
       <input class="form-control" placeholder="yyyy-mm-dd"
-             name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+             name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker"
+      [minDate]="_minDate">
       <div class="input-group-addon" (click)="d.toggle()" >
         <i class="fa fa-calendar" aria-hidden="true"></i>
       </div>

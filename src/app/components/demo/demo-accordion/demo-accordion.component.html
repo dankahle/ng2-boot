@@ -8,24 +8,23 @@
   </div>
 </demo>
 
-<div  *ngIf="demo.ngShow || demo.ng2Show">
+<div class="dk-settings" *ngIf="demo.shown">
 
   <div class="form-group">
-    <label>one panel at a time: <input id="onePanel" type="checkbox" [(ngModel)]="onePanel"></label>
+    <label class="inline">one panel at a time: <input id="onePanel" type="checkbox" [(ngModel)]="onePanel"></label>
   </div>
 
   <div class="form-group">
-    <label>toggle panel:</label>
+    <label class="inline">toggle panel:</label>
     <select [(ngModel)]="selectedPanel" style="width:100px; display: inline-block; margin-right:20px;">
       <option *ngFor="let panel of panels">{{panel.id}}</option>
     </select>
-    <button class="btn" (click)="toggle(selectedPanel)">toggle</button>
-    <button class="btn" (click)="disable(selectedPanel)">enable/disable</button>
+    <button class="btn inline" (click)="toggle(selectedPanel)">toggle</button>
+    <button class="btn inline" (click)="disable(selectedPanel)">enable/disable</button>
     <br>
   </div>
 
 </div>
-<br>
 
 <ng-accordion #ngAccord *ngIf="demo.ngShow" [panels]="panels" [onePanel]="onePanel"></ng-accordion>
 <ng2-accordion #ng2Accord *ngIf="demo.ng2Show" [panels]="panels" [onePanel]="onePanel"></ng2-accordion>

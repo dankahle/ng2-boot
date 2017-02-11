@@ -1,3 +1,7 @@
 
 
+just starting ng datepicker
+
+you needed font-awesome, but didn't like hte way ng put the whole file in the style tag. Shoudl just use css imports right? I guess then the page browser has to GET that file and that just takes more time. Is it better to put it in angular-cli.json and have ng put it in the head instead of browser get it? Hmm. Seems to me, waiting for ng is too late. Let the browser handle it, maybe it does it in parallel then. Maybe ng does too though. who knows. Hard to tell which way to go.
+
 

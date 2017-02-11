@@ -28,6 +28,9 @@ import { NgButtonsComponent } from './ng-bootstrap/ng-buttons/ng-buttons.compone
 import { DemoCarouselComponent } from './demo/demo-carousel/demo-carousel.component';
 import { NgCarouselComponent } from './ng-bootstrap/ng-carousel/ng-carousel.component';
 import { Ng2CarouselComponent } from './ng2-bootstrap/ng2-carousel/ng2-carousel.component';
+import { DemoDatePickerComponent } from './demo/demo-date-picker/demo-date-picker.component';
+import { NgDatePickerComponent } from './ng-bootstrap/ng-date-picker/ng-date-picker.component';
+import { Ng2DatePickerComponent } from './ng2-bootstrap/ng2-date-picker/ng2-date-picker.component';
 
 
 @NgModule({
@@ -41,12 +44,12 @@ import { Ng2CarouselComponent } from './ng2-bootstrap/ng2-carousel/ng2-carousel.
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent],
 
    exports: [DemoCurrentComponent],
 
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent],
 
 })
 export class ComponentsModule { }

@@ -1,0 +1,21 @@
+{
+  "name": "ng2-boot",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dan Kahle <daniel.kahle@acxiom.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dankahle/ng2-boot",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -2,13 +2,16 @@
 <demo #demo>
   <div class="title">datepicker</div>
   <div class="desc">
+    ng has a multiple month view that's nice, but doesn't have anything special for "today" and no setting to display it either.
   </div>
 </demo>
 
 <div class="dk-settings" *ngIf="demo.shown">
-  <span class="prop">limit to today or later</span> <input type="checkbox" [(ngModel)]="todayOrLater">
+  <span class="prop">limit to today or later</span> <input type="checkbox" [(ngModel)]="todayOrLater"><br>
+  <span class="prop">start date: 6/29/57</span> <input type="checkbox" [(ngModel)]="showStartDate"><br>
+  <button class="inline" (click)="fireSetToday()">set today</button>
 </div>
 
-<ng-date-picker *ngIf="demo.ngShow" [minDate]="minDate" ></ng-date-picker>
-<ng2-date-picker  *ngIf="demo.ng2Show"></ng2-date-picker>
+<ng-date-picker #ng="ngDatePickerComponent" *ngIf="demo.ngShow" [minDate]="minDate" [showStartDate]="showStartDate"></ng-date-picker>
+<ng2-date-picker #ng2="ng2DatePickerComponent"  *ngIf="demo.ng2Show"></ng2-date-picker>
 

@@ -1,27 +1,42 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {NgbDateStruct} from "@ng-bootstrap/ng-bootstrap";
+import {Component, OnInit, Input, ViewChild, Optional} from '@angular/core';
+import {NgbDateStruct, NgbDatepicker} from "@ng-bootstrap/ng-bootstrap";
+import {DemoDatePickerComponent} from "../../demo/demo-date-picker/demo-date-picker.component";
 
 
 @Component({
   selector: 'ng-date-picker',
+  exportAs: 'ngDatePickerComponent',
   templateUrl: './ng-date-picker.component.html',
   styleUrls: ['./ng-date-picker.component.css']
 })
 export class NgDatePickerComponent {
+  @ViewChild('ngDatePicker') datePicker: NgbDatepicker;
   model: NgbDateStruct;
   _minDate: NgbDateStruct;
+  startDate: NgbDateStruct;
   // model: NgbDateStruct;
   @Input() set minDate(val:Date) {
     this._minDate = this.ngbDateStructFromDate(val);
   };
+  @Input() set showStartDate(val:boolean) {
+    if (val) {
+      this.startDate = this.ngbDateStructFromDate(new Date(1957, 5, 29));
+    }
+    else {
+      this.startDate = null;
+    }
+  };
 
-  constructor() {
-/*
-    // to set the current date to today, then it's in primary color, but why the heck isn't is highlighted
-    // at all? I.e. no value to say "show today somehow"
-    const now = new Date();
-    this.model = {year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate()}
-*/
+  constructor(private demoDatePicker:DemoDatePickerComponent) {
+
+  }
+
+  ngAfterViewInit() {
+    // this.demoDatePicker.setToday.subscribe(this.setToday);
+  }
+
+  setToday() {
+    this.datePicker.navigateTo(this.ngbDateStructFromDate(new Date()));
   }
 
   ngbDateStructFromDate(date) {
@@ -30,3 +45,4 @@ export class NgDatePickerComponent {
     }
   }
 }
+

@@ -14,6 +14,7 @@ export class NgDatePickerComponent {
   model: NgbDateStruct;
   _minDate: NgbDateStruct;
   startDate: NgbDateStruct;
+  _parent: DemoDatePickerComponent;
   // model: NgbDateStruct;
   @Input() set minDate(val:Date) {
     this._minDate = this.ngbDateStructFromDate(val);
@@ -26,18 +27,28 @@ export class NgDatePickerComponent {
       this.startDate = null;
     }
   };
+  @Input() disabled:boolean;
 
+  setToday() {
+    this.model = this.ngbDateStructFromDate(new Date())
+  }
+
+  thisMonth() {
+    this.datePicker.navigateTo();
+  }
+
+  set parent(val) {
+    this._parent = val;
+    this._parent.setToday.subscribe(this.setToday.bind(this));
+    this._parent.thisMonth.subscribe(this.thisMonth.bind(this));
+  }
+
+/*
+  // this won't work cause parent is already using @ViewChild to see this guy. Can't have both evidently
   constructor(private demoDatePicker:DemoDatePickerComponent) {
 
   }
-
-  ngAfterViewInit() {
-    // this.demoDatePicker.setToday.subscribe(this.setToday);
-  }
-
-  setToday() {
-    this.datePicker.navigateTo(this.ngbDateStructFromDate(new Date()));
-  }
+*/
 
   ngbDateStructFromDate(date) {
     if (date) {

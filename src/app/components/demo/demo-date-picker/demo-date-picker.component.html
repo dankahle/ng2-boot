@@ -9,9 +9,13 @@
 <div class="dk-settings" *ngIf="demo.shown">
   <span class="prop">limit to today or later</span> <input type="checkbox" [(ngModel)]="todayOrLater"><br>
   <span class="prop">start date: 6/29/57</span> <input type="checkbox" [(ngModel)]="showStartDate"><br>
-  <button class="inline" (click)="fireSetToday()">set today</button>
+  <button class="inline btn" (click)="fireSetToday()">set today</button>
+  <button class="inline btn" (click)="fireThisMonth()">move to this month</button>
+  <button class="inline btn btn-{{disabled ? 'danger' : 'success'}}" (click)="disabled = !disabled">
+    {{ disabled ? "disabled" : "enabled"}}
+  </button>
 </div>
 
-<ng-date-picker #ng="ngDatePickerComponent" *ngIf="demo.ngShow" [minDate]="minDate" [showStartDate]="showStartDate"></ng-date-picker>
+<ng-date-picker #ng="ngDatePickerComponent" *ngIf="demo.ngShow" [minDate]="minDate" [showStartDate]="showStartDate" [disabled]="disabled"></ng-date-picker>
 <ng2-date-picker #ng2="ng2DatePickerComponent"  *ngIf="demo.ng2Show"></ng2-date-picker>
 

@@ -3,7 +3,10 @@
 just starting ng datepicker
 looking at the ng one now
 
-MODAL'S BROKEN. What?? both of them. The ng one is missing the modal prop and calling modal.close() in the base class on undefined. What. Anyway you were gonna look at github history and decided you needed to put a github icon on the page. Done. So now need to fix the modal and get back to ng datepicker.
+you fixed both modal bugs (geez) and tested ng2 with boot3, looks nice
+
+
+
 
 
 

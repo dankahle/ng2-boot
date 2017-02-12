@@ -53,3 +53,4 @@ import { Ng2DatePickerComponent } from './ng2-bootstrap/ng2-date-picker/ng2-date
 
 })
 export class ComponentsModule { }
+

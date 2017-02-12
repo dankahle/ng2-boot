@@ -3,12 +3,6 @@
 just starting ng datepicker
 looking at the ng one now
 
-you're working on the ng datepicker and wanted to do setToday() but no base class on ng/ng2 datepicker comps so calling setToday() was not compiling. (hmmm could have added a setToday in ng2 and then would have worked?)
+you're working on the ng datepicker, looking at that input datepicker, not sure what that is, i.e. not used in their egs. Try one out and see what it does. It's a directive right? so add to an input element and done?
 
-anyway, decided to hack up an output instead had have your two comps inject the demo comp via constructor, but was failing at runtime (not compile). So... decided to go to ng2-play and verify the cookbook >> injecting parent stuff, i.e. should easily be able to get ahold of parent comp if you inject the class in the child right?
-
-thing is: you need a solid plan for getting ahold of children (@ViewChild) and... getting ahold of parent (inject into constructor). I suppose that's a whole day going thorugh that section in ng2play and making sense of it, but worht the time.
-
-anyway, created a new ng2-play and won't run ng serve "even after you did the npm update for that", so are upgracing from 26 to 31 and hopefully that will work
-
-
+ anyway check that out and get through the rest of the doc, buggy to say the least, a lot of the change month stuff gets confused when you set start date for some reason.

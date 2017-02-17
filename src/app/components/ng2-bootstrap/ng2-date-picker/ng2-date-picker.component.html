@@ -1,3 +1,28 @@
-<p>
-  ng2-date-picker works!
-</p>
+
+<form>
+  <div class="form-group" style="width:283px;">
+    <div class="input-group">
+      <input class="form-control" placeholder="mm/dd/yyyy"
+             name="dp" [(ngModel)]="stringDate">
+      <div class="input-group-addon" (click)="show = !show">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div style="position:relative">
+      <datepicker *ngIf="show" name="ng2dp" [(ngModel)]="dateDate" [showWeeks]="true" [dateDisabled]="dateDisabled"
+                  [minDate]="minDate" [initDate]="startDate" [disabled]="disabled" (selectionDone)="selectionDone($event)"
+                  style="position:absolute; left:0; top:0">
+      </datepicker>
+    </div>
+  </div>
+</form>
+
+<hr/>
+<pre>
+  stringDate: {{ stringDate | json }}
+  dateDate: {{ dateDate | date:'MM/dd/yyyy' }}
+</pre>
+
+
+
+

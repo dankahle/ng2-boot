@@ -1,8 +1,6 @@
 
 
-just starting ng datepicker
-looking at the ng one now
+ng2 datepicker
+how to format the input date? I.e. it's bound to a date, but how to format it? Needs to be bound to a string instead?
 
-you're working on the ng datepicker, looking at that input datepicker, not sure what that is, i.e. not used in their egs. Try one out and see what it does. It's a directive right? so add to an input element and done?
-
- anyway check that out and get through the rest of the doc, buggy to say the least, a lot of the change month stuff gets confused when you set start date for some reason.
+tried that but not displaying at bottom right

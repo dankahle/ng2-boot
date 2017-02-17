@@ -11,7 +11,10 @@ import { DemoDynamicComponent } from './demo/demo-dynamic/demo-dynamic.component
 import { DemoCollapseComponent } from './demo/demo-collapse/demo-collapse.component';
 import { Ng2AlertComponent } from './ng2-bootstrap/ng2-alert/ng2-alert.component';
 import { DemoComponent } from './demo/demo/demo.component';
-import {AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule} from 'ng2-bootstrap';
+import {
+  AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule,
+  DatepickerModule
+} from 'ng2-bootstrap';
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
 import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';
@@ -38,7 +41,7 @@ import { Ng2DatePickerComponent } from './ng2-bootstrap/ng2-date-picker/ng2-date
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot()
+    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot()
   ],
   providers: [],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,

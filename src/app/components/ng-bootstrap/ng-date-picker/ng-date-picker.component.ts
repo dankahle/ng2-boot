@@ -1,13 +1,15 @@
 import {Component, OnInit, Input, ViewChild, Optional} from '@angular/core';
-import {NgbDateStruct, NgbDatepicker} from "@ng-bootstrap/ng-bootstrap";
+import {NgbDateStruct, NgbDatepicker, NgbDateParserFormatter} from "@ng-bootstrap/ng-bootstrap";
 import {DemoDatePickerComponent} from "../../demo/demo-date-picker/demo-date-picker.component";
+import {DkParserFormatter} from "./parserFormatter";
 
 
 @Component({
   selector: 'ng-date-picker',
   exportAs: 'ngDatePickerComponent',
   templateUrl: './ng-date-picker.component.html',
-  styleUrls: ['./ng-date-picker.component.css']
+  styleUrls: ['./ng-date-picker.component.css'],
+  providers: [{provide: NgbDateParserFormatter, useClass: DkParserFormatter}]
 })
 export class NgDatePickerComponent {
   @ViewChild('ngDatePicker') datePicker: NgbDatepicker;
@@ -21,7 +23,7 @@ export class NgDatePickerComponent {
   };
   @Input() set showStartDate(val:boolean) {
     if (val) {
-      this.startDate = this.ngbDateStructFromDate(new Date(1957, 5, 29));
+      this.startDate = this.ngbDateStructFromDate(new Date(1991, 11, 14));
     }
     else {
       this.startDate = null;

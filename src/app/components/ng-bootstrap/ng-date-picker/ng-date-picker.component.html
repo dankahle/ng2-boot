@@ -1,8 +1,8 @@
 <form class="form-inline">
   <div class="form-group">
     <div class="input-group">
-      <input class="form-control" placeholder="mm-dd-yyyy"
-             name="dp" [(ngModel)]="model" ngbDatepicker #ngDatePicker="ngbDatepicker"
+      <input class="form-control" placeholder="mm/dd/yyyy"
+             name="dp" [(ngModel)]="ngbDate" ngbDatepicker #ngDatePicker="ngbDatepicker"
              [minDate]="_minDate" [startDate]="startDate" [disabled]="disabled">
       <div class="input-group-addon" (click)="ngDatePicker.toggle()">
         <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -12,5 +12,8 @@
 </form>
 
 <hr/>
-<pre>Model: {{ model | json }}</pre>
+<pre>
+  date: {{date}}<br>
+  ngbDate: {{ ngbDate | json }}
+</pre>
 

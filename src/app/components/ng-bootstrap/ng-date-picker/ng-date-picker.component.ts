@@ -2,7 +2,7 @@ import {Component, OnInit, Input, ViewChild, Optional} from '@angular/core';
 import {NgbDateStruct, NgbDatepicker, NgbDateParserFormatter} from "@ng-bootstrap/ng-bootstrap";
 import {DemoDatePickerComponent} from "../../demo/demo-date-picker/demo-date-picker.component";
 import {DkParserFormatter} from "./parserFormatter";
-
+import * as moment from 'moment';
 
 @Component({
   selector: 'ng-date-picker',
@@ -13,11 +13,18 @@ import {DkParserFormatter} from "./parserFormatter";
 })
 export class NgDatePickerComponent {
   @ViewChild('ngDatePicker') datePicker: NgbDatepicker;
-  model: NgbDateStruct;
+  date: string;
+  formatMoment = 'MM/DD/YYYY';
+  formatPipe = 'MM/dd/yyyy';
+  _ngbDate: NgbDateStruct;
+  get ngbDate() {return this._ngbDate;}
+  set ngbDate (val:NgbDateStruct) {
+    this._ngbDate = val;
+    this.date = moment(new Date(val.year, val.month-1, val.day)).format(this.formatMoment);
+  }
   _minDate: NgbDateStruct;
   startDate: NgbDateStruct;
   _parent: DemoDatePickerComponent;
-  // model: NgbDateStruct;
   @Input() set minDate(val:Date) {
     this._minDate = this.ngbDateStructFromDate(val);
   };
@@ -32,7 +39,7 @@ export class NgDatePickerComponent {
   @Input() disabled:boolean;
 
   setToday() {
-    this.model = this.ngbDateStructFromDate(new Date())
+    this.ngbDate = this.ngbDateStructFromDate(new Date())
   }
 
   thisMonth() {
@@ -57,5 +64,6 @@ export class NgDatePickerComponent {
       return {year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate()}
     }
   }
+
 }
 

@@ -39,7 +39,8 @@ import {JquiDatePickerDirective} from "./mine/jquiDatePicker/jqui-date-picker.di
 import { DemoDropdownComponent } from './demo/demo-dropdown/demo-dropdown.component';
 import { NgDropdownComponent } from './ng-bootstrap/ng-dropdown/ng-dropdown.component';
 import { Ng2DropdownComponent } from './ng2-bootstrap/ng2-dropdown/ng2-dropdown.component';
-
+import {JquiDatepickerConfigService} from "./mine/jquiDatePicker/jqui-datepicker-config.service";
+import * as _ from 'lodash';
 
 @NgModule({
   imports: [
@@ -48,7 +49,7 @@ import { Ng2DropdownComponent } from './ng2-bootstrap/ng2-dropdown/ng2-dropdown.
     NgbModule,
     AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot(), DropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [JquiDatepickerConfigService],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
@@ -60,5 +61,12 @@ import { Ng2DropdownComponent } from './ng2-bootstrap/ng2-dropdown/ng2-dropdown.
      NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent],
 
 })
-export class ComponentsModule { }
+export class ComponentsModule {
+  constructor(jquiDatepickerConfig:JquiDatepickerConfigService) {
+    jquiDatepickerConfig.dateFormat = 'mm/dd/yy';
+    _.merge(jquiDatepickerConfig, {
+      prevText: 'my prev text'
+    })
+  }
+}
 

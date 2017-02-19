@@ -7,6 +7,7 @@ import {DemoAccordionComponent} from "../components/demo/demo-accordion/demo-acc
 import {DemoButtonsComponent} from "../components/demo/demo-buttons/demo-buttons.component";
 import {DemoCarouselComponent} from "../components/demo/demo-carousel/demo-carousel.component";
 import {DemoDatePickerComponent} from "../components/demo/demo-date-picker/demo-date-picker.component";
+import {DemoJquiDatePickerComponent} from "../components/demo/demo-jqui-date-picker/demo-jqui-date-picker.component";
 
 export const comps: Comp[] = [
   {name: 'accordion', type: DemoAccordionComponent, group: CompGroup.boot},
@@ -17,7 +18,8 @@ export const comps: Comp[] = [
   {name: 'datepicker', type: DemoDatePickerComponent, group: CompGroup.boot},
   {name: 'modal', type: DemoModalComponent, group: CompGroup.boot},
 
-  {name: 'dkDynamic', type: DemoDynamicComponent, group: CompGroup.mine}
+  {name: 'dkDynamic', type: DemoDynamicComponent, group: CompGroup.mine},
+  {name: 'jquiDatePicker', type: DemoJquiDatePickerComponent, group: CompGroup.mine}
 ];
 
 

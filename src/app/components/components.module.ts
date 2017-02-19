@@ -34,6 +34,8 @@ import { Ng2CarouselComponent } from './ng2-bootstrap/ng2-carousel/ng2-carousel.
 import { DemoDatePickerComponent } from './demo/demo-date-picker/demo-date-picker.component';
 import { NgDatePickerComponent } from './ng-bootstrap/ng-date-picker/ng-date-picker.component';
 import { Ng2DatePickerComponent } from './ng2-bootstrap/ng2-date-picker/ng2-date-picker.component';
+import { DemoJquiDatePickerComponent } from './demo/demo-jqui-date-picker/demo-jqui-date-picker.component';
+import {JquiDatePickerDirective} from "./mine/jquiDatePicker/jqui-date-picker.directive";
 
 
 @NgModule({
@@ -47,12 +49,12 @@ import { Ng2DatePickerComponent } from './ng2-bootstrap/ng2-date-picker/ng2-date
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective],
 
    exports: [DemoCurrentComponent],
 
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent],
 
 })
 export class ComponentsModule { }

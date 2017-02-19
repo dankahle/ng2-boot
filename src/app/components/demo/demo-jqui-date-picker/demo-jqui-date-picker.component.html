@@ -1,0 +1,11 @@
+
+<demo #demo [hasButtons]="false">
+  <div class="title">jquery ui datepicker directive</div>
+  <div class="desc">
+    a directive that wraps the jquery ui datepicker
+  </div>
+</demo>
+
+<input jquiDatePicker [(ngModel)]="date" (datePick)="updateDate($event)"><br>
+date: {{date}}
+

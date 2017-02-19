@@ -13,7 +13,7 @@ import { Ng2AlertComponent } from './ng2-bootstrap/ng2-alert/ng2-alert.component
 import { DemoComponent } from './demo/demo/demo.component';
 import {
   AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule,
-  DatepickerModule
+  DatepickerModule, DropdownModule
 } from 'ng2-bootstrap';
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
@@ -36,6 +36,9 @@ import { NgDatePickerComponent } from './ng-bootstrap/ng-date-picker/ng-date-pic
 import { Ng2DatePickerComponent } from './ng2-bootstrap/ng2-date-picker/ng2-date-picker.component';
 import { DemoJquiDatePickerComponent } from './demo/demo-jqui-date-picker/demo-jqui-date-picker.component';
 import {JquiDatePickerDirective} from "./mine/jquiDatePicker/jqui-date-picker.directive";
+import { DemoDropdownComponent } from './demo/demo-dropdown/demo-dropdown.component';
+import { NgDropdownComponent } from './ng-bootstrap/ng-dropdown/ng-dropdown.component';
+import { Ng2DropdownComponent } from './ng2-bootstrap/ng2-dropdown/ng2-dropdown.component';
 
 
 @NgModule({
@@ -43,18 +46,18 @@ import {JquiDatePickerDirective} from "./mine/jquiDatePicker/jqui-date-picker.di
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot()
+    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot(), DropdownModule.forRoot()
   ],
   providers: [],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent],
 
    exports: [DemoCurrentComponent],
 
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent],
 
 })
 export class ComponentsModule { }

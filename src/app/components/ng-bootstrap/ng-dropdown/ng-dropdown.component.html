@@ -1,0 +1,7 @@
+
+<div ngbDropdown>
+  <button class="btn btn-outline-primary" id="dropdownMenu1" ngbDropdownToggle>{{color?.name || 'pick color'}}</button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <button *ngFor="let c of colors" class="dropdown-item" (click)="color = c">{{c.name}}</button>
+  </div>
+</div>

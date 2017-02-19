@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input, ViewChild} from '@angular/core';
+import {NgbDropdown} from "@ng-bootstrap/ng-bootstrap";
 
 interface Color {
   id:number,
@@ -16,5 +17,22 @@ export class NgDropdownComponent {
     {id: 1, name: 'Red'},
     {id: 2, name: 'Green'},
     {id: 3, name: 'Blue'}
-    ]
+    ];
+  @ViewChild('dropdown') dropdown:NgbDropdown;
+  afterContentInit = false;
+
+  ngAfterContentInit() {
+    this.afterContentInit = true;
+  }
+
+  @Input() set toggle(val:boolean) {
+
+    if(val) {
+      this.dropdown.open()
+    }
+    else {
+      this.dropdown.close()
+    }
+  }
+
 }

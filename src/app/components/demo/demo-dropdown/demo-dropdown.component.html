@@ -2,7 +2,13 @@
 <demo #demo>
   <div class="title">dropdown</div>
   <div class="desc">
+    ng dropdown has a funky thing you have to do to get a manual open: $event.stopPropagation() on the button you hit.
+    Not sure why that is, just that it won't toggle without it, either here or in ng online demo. So the click event is going where? And how does that mess up the opening of the dropdown? I.e. the toggle property gets set and right down to the ngDropDown it gets the call to open/close. Not sure what it is.
   </div>
 </demo>
-<ng-dropdown *ngIf="demo.ngShow"></ng-dropdown>
-<ng2-dropdown  *ngIf="demo.ng2Show"></ng2-dropdown>
+<div class="dk-settings" *ngIf="demo.shown">
+  <button class="btn" (click)="$event.stopPropagation(); toggle = !toggle">toggle dropdown</button>
+</div>
+
+<ng-dropdown *ngIf="demo.ngShow" [toggle]="toggle"></ng-dropdown>
+<ng2-dropdown  *ngIf="demo.ng2Show" [toggle]="toggle"></ng2-dropdown>

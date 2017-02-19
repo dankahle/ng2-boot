@@ -6,6 +6,6 @@
   </div>
 </demo>
 
-<input jquiDatePicker [(ngModel)]="date" (datePick)="updateDate($event)"><br>
+<input jquiDatePicker [(ngModel)]="date" (datePick)="updateDate($event)" [config]="config"><br>
 date: {{date}}
 

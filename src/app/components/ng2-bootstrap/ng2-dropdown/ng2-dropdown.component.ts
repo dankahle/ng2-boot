@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'ng2-dropdown',
@@ -12,5 +12,8 @@ export class Ng2DropdownComponent {
     {id: 1, name: 'Red'},
     {id: 2, name: 'Green'},
     {id: 3, name: 'Blue'}
-  ]
+  ];
+
+  @Input() toggle:boolean;
+
 }

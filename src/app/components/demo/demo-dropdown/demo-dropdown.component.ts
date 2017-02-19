@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'demo-dropdown',
   templateUrl: './demo-dropdown.component.html',
   styleUrls: ['../../demo-content.scss', './demo-dropdown.component.scss']
 })
-export class DemoDropdownComponent implements OnInit {
+export class DemoDropdownComponent {
+  @ViewChild('demo') demo;
+  toggle = false;
 
-  constructor() { }
+  init() {
+    this.toggle = false;
+  }
 
-  ngOnInit() {
+  onDemoButtonChange() {
+    this.init();
+  }
+
+  ngAfterViewInit() {
+    this.demo.buttonChange.subscribe(this.onDemoButtonChange.bind(this));
   }
 
 }
+

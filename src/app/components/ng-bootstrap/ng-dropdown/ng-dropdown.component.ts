@@ -27,11 +27,12 @@ export class NgDropdownComponent {
 
   @Input() set toggle(val:boolean) {
 
-    if(val) {
-      this.dropdown.open()
+    // can't run by toggle boolean as it can get out of sync if they click on document to close
+    if(this.dropdown.isOpen()) {
+      this.dropdown.close()
     }
     else {
-      this.dropdown.close()
+      this.dropdown.open()
     }
   }
 

@@ -1,0 +1,22 @@
+
+<demo #demo>
+  <div class="title">pagination</div>
+  <div class="desc">
+    ng2 has a pager option that's only prev/next buttons instead of numbered pages.
+  </div>
+</demo>
+<div class="dk-settings" [hidden]="!demo.shown">
+  <label class="inline">showFirstLastLinks <input type="checkbox" [(ngModel)]="settings.showFirstLast"></label>
+  <label class="inline">showPrevNext <input type="checkbox" [(ngModel)]="settings.showPrevNext"></label><br>
+
+  <label class="prop">item count:</label> <input type="number" [(ngModel)]="itemCount"><br>
+  <label class="prop">pageSize:</label> <input type="number" [(ngModel)]="pageSize"><br>
+  <label class="prop">max pages:</label> <input [(ngModel)]="settings.maxPages"><br>
+
+  <div #pageDiv style="width:300px;border:1px solid;">
+    <div *ngFor="let line of page">{{line}}</div>
+  </div>
+</div>
+
+<ng-pagination *ngIf="demo.ngShow" [settings]="settings" (pageChange)="setPage($event)"></ng-pagination>
+<ng2-pagination  *ngIf="demo.ng2Show" [settings]="settings" (pageChange)="setPage($event)"></ng2-pagination>

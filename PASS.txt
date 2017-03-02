@@ -1,6 +1,11 @@
 
 
-ng2 datepicker
-how to format the input date? I.e. it's bound to a date, but how to format it? Needs to be bound to a string instead?
+pagination:
 
-tried that but not displaying at bottom right
+bug:
+when you change pagesize, ng2 needs to reset cur page to 1 or it crashes.
+
+
+itemcount isn't updating things right either, not for ng2, but everyting works fine on ng, what's different?
+
+add disabled checkbox

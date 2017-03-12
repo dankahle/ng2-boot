@@ -12,6 +12,7 @@ export class NgPaginationComponent {
   _page = 1;
   get page() {return this._page;}
   set page(val) {
+    this._page = val;
     this.pageChange.emit(val - 1);
   }
 

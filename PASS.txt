@@ -1,11 +1,3 @@
+pass:
+done with pagination
 
-
-pagination:
-
-bug:
-when you change pagesize, ng2 needs to reset cur page to 1 or it crashes.
-
-
-itemcount isn't updating things right either, not for ng2, but everyting works fine on ng, what's different?
-
-add disabled checkbox

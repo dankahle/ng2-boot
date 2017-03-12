@@ -70,14 +70,18 @@ export class DemoPaginationComponent {
       lines.push(`another line, index: ${i}`);
     }
     this.lines = lines;
-    this.setPage(this.pageNo);
+    this.setPage(this.pageNo, true);
   }
 
-  setPage(pageNo) {
-    this.pageNo = pageNo;
+  setPage(pageNo, dontChangePage?:boolean) {
+
+    if (dontChangePage) {
+      this.pageNo = pageNo;
+    }
     let start = this.pageNo * this.settings.pageSize;
     let end = start + this.settings.pageSize;
     end = end > this.itemCount? this.itemCount: end;
     this.page = this.lines.slice(start, end);
   }
+
 }

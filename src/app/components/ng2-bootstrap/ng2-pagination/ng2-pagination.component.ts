@@ -10,12 +10,11 @@ export class Ng2PaginationComponent {
 
   @Input() settings:PaginationSettings;
   @Output() pageChange = new EventEmitter<number>();
-  @Input() set setPagetoOne(val) {
-    this.page = 1;
-  }
+  dontEmit = false;
   _page = 1;
   get page() {return this._page;}
   set page(val) {
+    this._page = val;
     this.pageChange.emit(val - 1);
   }
 }

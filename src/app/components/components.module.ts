@@ -44,6 +44,9 @@ import * as _ from 'lodash';
 import { DemoPaginationComponent } from './demo/demo-pagination/demo-pagination.component';
 import { NgPaginationComponent } from './ng-bootstrap/ng-pagination/ng-pagination.component';
 import { Ng2PaginationComponent } from './ng2-bootstrap/ng2-pagination/ng2-pagination.component';
+import { DemoPopoverComponent } from './demo/demo-popover/demo-popover.component';
+import { NgPopoverComponent } from './ng-bootstrap/ng-popover/ng-popover.component';
+import { Ng2PopoverComponent } from './ng2-bootstrap/ng2-popover/ng2-popover.component';
 
 @NgModule({
   imports: [
@@ -56,12 +59,12 @@ import { Ng2PaginationComponent } from './ng2-bootstrap/ng2-pagination/ng2-pagin
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent, DemoPaginationComponent, NgPaginationComponent, Ng2PaginationComponent],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent, DemoPaginationComponent, NgPaginationComponent, Ng2PaginationComponent, DemoPopoverComponent, NgPopoverComponent, Ng2PopoverComponent],
 
    exports: [DemoCurrentComponent],
 
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent, DemoPaginationComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent, DemoPaginationComponent, DemoPopoverComponent],
 
 })
 export class ComponentsModule {

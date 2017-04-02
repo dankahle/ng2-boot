@@ -13,7 +13,7 @@ import { Ng2AlertComponent } from './ng2-bootstrap/ng2-alert/ng2-alert.component
 import { DemoComponent } from './demo/demo/demo.component';
 import {
   AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule,
-  DatepickerModule, DropdownModule, PaginationModule
+  DatepickerModule, BsDropdownModule, PaginationModule
 } from 'ng2-bootstrap';
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
@@ -53,7 +53,7 @@ import { Ng2PopoverComponent } from './ng2-bootstrap/ng2-popover/ng2-popover.com
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot(), DropdownModule.forRoot(), PaginationModule.forRoot()
+    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot(), BsDropdownModule.forRoot(), PaginationModule.forRoot()
   ],
   providers: [JquiDatepickerConfigService],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,

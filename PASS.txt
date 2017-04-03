@@ -1,11 +1,17 @@
 
 
-// how to upgrade to angular/cli 1.0.0 IT REQUIRES NODE 6.9.0+
-https://github.com/angular/angular-cli/wiki/stories-rc-update
+
+bugs:
+accordion
+ng2 accordion is all primary color, what?
+
+dropdown:
+both: toggle button doesn't work
 
 
-pass:
-fix these bugs for ng2.4.10, then push to repo THEN... see if you can change to ng4 and get away with it, if not, simply revert to 2.4.10 and call it a day WATCH OUT FOR ROUTING, IT'S ON 3.XX OR SOMETHING, NOTE THAT FIRST OR SAVE THE PACKAGE.JSON (BETTER).
+pagination
+both don't update the items list when you chagne pages
+
 
 
 BUG:

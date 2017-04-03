@@ -1,10 +1,10 @@
-import { Ng2BootPage } from './app.po';
+import { Ng4egPage } from './app.po';
 
-describe('ng2-boot App', function() {
-  let page: Ng2BootPage;
+describe('ng4eg App', () => {
+  let page: Ng4egPage;
 
   beforeEach(() => {
-    page = new Ng2BootPage();
+    page = new Ng4egPage();
   });
 
   it('should display message saying app works', () => {

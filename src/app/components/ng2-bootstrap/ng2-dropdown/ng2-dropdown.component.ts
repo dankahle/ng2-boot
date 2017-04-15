@@ -1,4 +1,5 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, ViewChild} from '@angular/core';
+import {BsDropdownDirective} from "ng2-bootstrap";
 
 @Component({
   selector: 'ng2-dropdown',
@@ -13,7 +14,14 @@ export class Ng2DropdownComponent {
     {id: 2, name: 'Green'},
     {id: 3, name: 'Blue'}
   ];
+  _toggle = false;
+  @ViewChild('dropdown') dropdown:BsDropdownDirective;
 
-  @Input() toggle:boolean;
+  @Input() set toggle(val:boolean) {
+    if (val === undefined) {
+      return;
+    }
 
+    this.dropdown.toggle();
+  }
 }

@@ -2,8 +2,6 @@
 
 
 bugs:
-accordion
-ng2 accordion is all primary color, what?
 
 dropdown:
 both: toggle button doesn't work

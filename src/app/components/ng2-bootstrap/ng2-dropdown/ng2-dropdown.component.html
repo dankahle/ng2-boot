@@ -1,6 +1,6 @@
 
-<div dropdown [isOpen]="toggle">
-  <button dropdownToggle class="btn btn-outline-primary" id="dropdownMenu1">{{color?.name || 'pick color'}}</button>
+<div bsDropdown #dropdown="bs-dropdown">
+  <button bsDropdownToggle class="btn btn-outline-primary" id="dropdownMenu1">{{color?.name || 'pick color'}}</button>
   <ul *dropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu1">
     <li *ngFor="let c of colors" (click)="color = c">
       <a class="dropdown-item" href="#">{{c.name}}</a>

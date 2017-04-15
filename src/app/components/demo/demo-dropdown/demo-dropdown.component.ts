@@ -7,10 +7,10 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 })
 export class DemoDropdownComponent {
   @ViewChild('demo') demo;
-  toggle = false;
+  toggle:boolean;
 
   init() {
-    this.toggle = false;
+    this.toggle = undefined;
   }
 
   onDemoButtonChange() {

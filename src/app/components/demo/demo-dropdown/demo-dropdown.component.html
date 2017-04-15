@@ -6,9 +6,9 @@
   </div>
 </demo>
 <div class="dk-settings" *ngIf="demo.shown">
-  <button class="btn" id="mybut1" (click)="toggle = !toggle" [attr.stuff]="'lala'">toggle dropdown</button>
+  <!--not sure what this stopPropagation does, but ng wont' work without it, they use it in their examples-->
+  <button class="btn" id="mybut1" (click)="$event.stopPropagation(); toggle = !toggle" [attr.stuff]="'lala'">toggle dropdown</button>
 </div>
-
 
 <ng-dropdown *ngIf="demo.ngShow" [toggle]="toggle"></ng-dropdown>
 <ng2-dropdown  *ngIf="demo.ng2Show" [toggle]="toggle"></ng2-dropdown>

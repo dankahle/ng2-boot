@@ -1,6 +1,6 @@
 
 <accordion #acc [closeOthers]="onePanel">
-  <accordion-group *ngFor="let panel of panels; let idx=index" [id]="panel.id" [heading]="panel.title" [isDisabled]="panel.disabled" [isOpen]="panel.isOpen" class="accord-panel" panelClass="panel-info card-info" [class.add-margin]="idx !== panels.length-1">
+  <accordion-group *ngFor="let panel of panels; let idx=index" [id]="panel.id" [heading]="panel.title" [isDisabled]="panel.disabled" [isOpen]="panel.isOpen" class="accord-panel" [class.add-margin]="idx !== panels.length-1">
     {{panel.content}}
   </accordion-group>
 </accordion>

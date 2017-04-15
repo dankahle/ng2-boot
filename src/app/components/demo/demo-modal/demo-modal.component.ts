@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, SimpleChanges, Input} from '@angular/core';
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
 import {NgModalComponent} from "../../ng-bootstrap/ng-modal/ng-modal.component";
-import {ModalDirective} from "ng2-bootstrap";
+import {ModalDirective} from "ngx-bootstrap";
 import * as _ from "lodash";
 import {Ng2ModalComponent} from "../../ng2-bootstrap/ng2-modal/ng2-modal.component";
 

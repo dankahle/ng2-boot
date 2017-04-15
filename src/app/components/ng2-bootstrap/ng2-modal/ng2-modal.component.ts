@@ -1,5 +1,5 @@
 import {Component, ViewChild, Input} from '@angular/core';
-import {ModalDirective, ModalOptions} from "ng2-bootstrap";
+import {ModalDirective, ModalOptions} from "ngx-bootstrap";
 import {Ng2ModalBaseComponent} from "../ng2-modal-base/ng2-modal-base.component";
 
 export class User {

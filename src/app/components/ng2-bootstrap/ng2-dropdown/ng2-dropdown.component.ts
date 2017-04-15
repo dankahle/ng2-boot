@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, ViewChild} from '@angular/core';
-import {BsDropdownDirective} from "ng2-bootstrap";
+import {BsDropdownDirective} from "ngx-bootstrap";
 
 @Component({
   selector: 'ng2-dropdown',

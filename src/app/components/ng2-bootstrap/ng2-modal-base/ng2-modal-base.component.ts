@@ -1,4 +1,4 @@
-import {ModalDirective} from "ng2-bootstrap";
+import {ModalDirective} from "ngx-bootstrap";
 import {ViewChild, Component} from "@angular/core";
 
 @Component({

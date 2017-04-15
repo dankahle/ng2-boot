@@ -14,7 +14,7 @@ import { DemoComponent } from './demo/demo/demo.component';
 import {
   AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule,
   DatepickerModule, BsDropdownModule, PaginationModule
-} from 'ng2-bootstrap';
+} from 'ngx-bootstrap';
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
 import { DemoCurrentComponent } from './demo/demo-current/demo-current.component';

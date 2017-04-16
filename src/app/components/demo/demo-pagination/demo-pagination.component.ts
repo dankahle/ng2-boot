@@ -48,6 +48,10 @@ export class DemoPaginationComponent {
 
   }
 
+  ngDoCheck() {
+    // console.log('docheck');
+  }
+
   setPageDivHeight(pageSize) {
     this.pageDiv.nativeElement.style.height = '' + (24 * pageSize + 3) + 'px';
   }
@@ -61,6 +65,7 @@ export class DemoPaginationComponent {
     this.settings = new PaginationSettings();
     this.itemCount = 27;
     this.pageSize = this.initialPageSize;
+    this.pageNo = 0;
     this.getLines();
   }
 
@@ -75,13 +80,17 @@ export class DemoPaginationComponent {
 
   setPage(pageNo, dontChangePage?:boolean) {
 
-    if (dontChangePage) {
+    if (!dontChangePage) {
       this.pageNo = pageNo;
     }
     let start = this.pageNo * this.settings.pageSize;
     let end = start + this.settings.pageSize;
     end = end > this.itemCount? this.itemCount: end;
-    this.page = this.lines.slice(start, end);
+    // can't do this as it says it changes this.page after check for ngFor expression. Not sure what's going on there
+    // as it calls ngDoCheck after this, just that the ngFor expression's complaining about it. Putting the code
+    // in a setTimeout fixes it
+    // this.page = this.lines.slice(start, end);
+    setTimeout(() => this.page = this.lines.slice(start, end))
   }
 
 }

@@ -1,26 +1,6 @@
 
 
 
-bugs:
-
-dropdown:
-both: toggle button doesn't work
-
-
-pagination
-both don't update the items list when you chagne pages
-
-
-
-BUG:
-ng2 dropdown has a new module name (fixed), but now it's broken and hoses the chrome tab on use. Also ng dropdown toggle isn't working either. Hmmm. Did something change. You need to review ngx or not? I.e. what version of ng are you using? 2.3 right?
-
-using ng2.4.10 now
-
-boot is same alpha6 so unchanged
-bumped ngboot to alpha22 from alpha20 see if it works now and fix what's broken
-
-moved ng2boot to 1.6.1 and surely still broken dropdown BUT... look at code first before running again as it hangs
 
 
 pass:

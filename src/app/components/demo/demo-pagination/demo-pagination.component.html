@@ -9,6 +9,7 @@
   <label class="inline">showFirstLastLinks <input type="checkbox" [(ngModel)]="settings.showFirstLast"></label>
   <label class="inline">showPrevNext <input type="checkbox" [(ngModel)]="settings.showPrevNext"></label><br>
 
+  <br><button (click)="itemCount = 25">setitmecount</button><br>
   <label class="prop">item count:</label> <input type="number" [(ngModel)]="itemCount"><br>
   <label class="prop">pageSize:</label> <input type="number" [(ngModel)]="pageSize"><br>
   <label class="prop">max pages:</label> <input [(ngModel)]="settings.maxPages"><br>

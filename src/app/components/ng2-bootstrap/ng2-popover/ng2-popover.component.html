@@ -1,3 +1,15 @@
-<p>
-  ng2-popover works!
-</p>
+
+<button type="button" class="btn btn-secondary" #p="bs-popover" [placement]="position"
+        popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Click Popover">Click</button>
+
+<button type="button" class="btn btn-secondary" [placement]="position" triggers="mouseenter:mouseleave"
+        popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Hover Popover">Hover</button>
+<br>
+<button type="button" class="btn btn-secondary" (click)="p.toggle()">
+  Toggle click popover
+</button>
+
+<template #popContent>Hello, <b>{{name}}</b>!</template>
+<button type="button" class="btn btn-secondary" [placement]="position"
+        [popover]="popContent" popoverTitle="Fancy content">Template</button>
+

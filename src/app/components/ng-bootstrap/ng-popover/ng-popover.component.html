@@ -1,3 +1,15 @@
-<p>
-  ng-popover works!
-</p>
+
+<button type="button" class="btn btn-secondary" #p="ngbPopover" [placement]="position"
+        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Click Popover">Click</button>
+
+<button type="button" class="btn btn-secondary" [placement]="position" triggers="mouseenter:mouseleave"
+        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Hover Popover">Hover</button>
+<br>
+<button type="button" class="btn btn-secondary" (click)="p.toggle()">
+  Toggle click popover
+</button>
+
+<template #popContent>Hello, <b>{{name}}</b>!</template>
+<button type="button" class="btn btn-secondary" [placement]="position"
+        [ngbPopover]="popContent" popoverTitle="Fancy content">Template</button>
+

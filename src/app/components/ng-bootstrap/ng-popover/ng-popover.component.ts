@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ng-popover',
   templateUrl: './ng-popover.component.html',
   styleUrls: ['./ng-popover.component.scss']
 })
-export class NgPopoverComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class NgPopoverComponent {
+  @Input() position:string;
+  name = 'dank';
 
 }

@@ -2,7 +2,26 @@
 <demo #demo>
   <div class="title">popover</div>
   <div class="desc">
+    ng: the
   </div>
 </demo>
-<ng-popover *ngIf="demo.ngShow"></ng-popover>
-<ng2-popover *ngIf="demo.ng2Show"></ng2-popover>
+
+<div class="dk-settings" *ngIf="demo.shown">
+  <fieldset>
+    <legend>options</legend>
+    <ul class="list-unstyled">
+      <li>
+        <span class="prop">position:</span>
+        <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="top"> top</label>
+        <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="right"> right</label>
+        <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="bottom"> bottom</label>
+        <label class="inline"><input type="radio" [(ngModel)]="position" name="position"triggers value="left"> left</label>
+      </li>
+    </ul>
+  </fieldset>
+</div>
+
+<div style="width:200px; margin-left:auto; margin-right:auto">
+  <ng-popover *ngIf="demo.ngShow" [position]="position"></ng-popover>
+  <ng2-popover *ngIf="demo.ng2Show" [position]="position"></ng2-popover>
+</div>

@@ -13,7 +13,7 @@ import { Ng2AlertComponent } from './ng2-bootstrap/ng2-alert/ng2-alert.component
 import { DemoComponent } from './demo/demo/demo.component';
 import {
   AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule,
-  DatepickerModule, BsDropdownModule, PaginationModule, PopoverModule
+  DatepickerModule, BsDropdownModule, PaginationModule, PopoverModule, ProgressbarModule
 } from 'ngx-bootstrap';
 
 import { Ng2CollapseComponent } from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
@@ -56,7 +56,7 @@ import { Ng2ProgressbarComponent } from './ng2-bootstrap/ng2-progressbar/ng2-pro
     CommonModule,
     FormsModule,
     NgbModule,
-    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot(), BsDropdownModule.forRoot(), PaginationModule.forRoot(), PopoverModule.forRoot()
+    AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(), CarouselModule.forRoot(), DatepickerModule.forRoot(), BsDropdownModule.forRoot(), PaginationModule.forRoot(), PopoverModule.forRoot(), ProgressbarModule.forRoot()
   ],
   providers: [JquiDatepickerConfigService],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,

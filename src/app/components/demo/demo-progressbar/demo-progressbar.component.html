@@ -2,6 +2,7 @@
 <demo #demo>
   <div class="title">progress bar</div>
   <div class="desc">
+    ng working fine, but ng2 not working for some reason. Not sure why.
   </div>
 </demo>
 <div class="dk-settings" [hidden]="!demo.shown">
@@ -15,11 +16,13 @@
   <label class="inline">striped <input type="checkbox" [(ngModel)]="settings.striped"></label>
   <label class="inline">animated <input type="checkbox" [(ngModel)]="settings.animated"></label><br>
 
-  <label class="inline">show value <input type="checkbox" [(ngModel)]="settings.showValue"></label>
+  <label *ngIf="demo.ngShow" class="inline">show value <input type="checkbox" [(ngModel)]="settings.showValue"></label>
+  <label *ngIf="demo.ng2Show" class="prop">value</label>
   <input type="number" [(ngModel)]="settings.value"><br>
-  <label class="inline">custom value</label><input [(ngModel)]="settings.customValue">
-
+  <label *ngIf="demo.ngShow" class="inline">custom value</label>
+  <label *ngIf="demo.ng2Show" class="inline">value text</label>
+  <input [(ngModel)]="settings.customValue">
 
 </div>
 <ng-progressbar *ngIf="demo.ngShow" [settings]="settings"></ng-progressbar>
-<ng2-progressbar  *ngIf="demo.ng2Show"></ng2-progressbar>
+<ng2-progressbar  *ngIf="demo.ng2Show" [settings]="settings"></ng2-progressbar>

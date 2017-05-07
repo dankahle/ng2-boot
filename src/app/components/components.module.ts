@@ -47,6 +47,9 @@ import { Ng2PaginationComponent } from './ng2-bootstrap/ng2-pagination/ng2-pagin
 import { DemoPopoverComponent } from './demo/demo-popover/demo-popover.component';
 import { NgPopoverComponent } from './ng-bootstrap/ng-popover/ng-popover.component';
 import { Ng2PopoverComponent } from './ng2-bootstrap/ng2-popover/ng2-popover.component';
+import { DemoProgressbarComponent } from './demo/demo-progressbar/demo-progressbar.component';
+import { NgProgressbarComponent } from './ng-bootstrap/ng-progressbar/ng-progressbar.component';
+import { Ng2ProgressbarComponent } from './ng2-bootstrap/ng2-progressbar/ng2-progressbar.component';
 
 @NgModule({
   imports: [
@@ -59,12 +62,12 @@ import { Ng2PopoverComponent } from './ng2-bootstrap/ng2-popover/ng2-popover.com
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent, DemoPaginationComponent, NgPaginationComponent, Ng2PaginationComponent, DemoPopoverComponent, NgPopoverComponent, Ng2PopoverComponent],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent, DemoPaginationComponent, NgPaginationComponent, Ng2PaginationComponent, DemoPopoverComponent, NgPopoverComponent, Ng2PopoverComponent, DemoProgressbarComponent, NgProgressbarComponent, Ng2ProgressbarComponent],
 
    exports: [DemoCurrentComponent],
 
    entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent, DemoPaginationComponent, DemoPopoverComponent],
+     NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent, DemoPaginationComponent, DemoPopoverComponent, DemoProgressbarComponent],
 
 })
 export class ComponentsModule {

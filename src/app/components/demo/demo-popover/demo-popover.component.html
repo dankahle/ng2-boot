@@ -7,18 +7,11 @@
 </demo>
 
 <div class="dk-settings" *ngIf="demo.shown">
-  <fieldset>
-    <legend>options</legend>
-    <ul class="list-unstyled">
-      <li>
-        <span class="prop">position:</span>
-        <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="top"> top</label>
-        <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="right"> right</label>
-        <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="bottom"> bottom</label>
-        <label class="inline"><input type="radio" [(ngModel)]="position" name="position"triggers value="left"> left</label>
-      </li>
-    </ul>
-  </fieldset>
+  <span class="prop">position:</span>
+  <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="top"> top</label>
+  <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="right"> right</label>
+  <label class="inline"><input type="radio" [(ngModel)]="position" name="position" value="bottom"> bottom</label>
+  <label class="inline"><input type="radio" [(ngModel)]="position" name="position" triggers value="left"> left</label>
 </div>
 
 <div style="width:200px; margin-left:auto; margin-right:auto">

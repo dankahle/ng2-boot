@@ -14,7 +14,7 @@ export class PaginationSettings {
 @Component({
   selector: 'demo-pagination',
   templateUrl: './demo-pagination.component.html',
-  styleUrls: ['./demo-pagination.component.scss']
+  styleUrls: ['../../demo-content.scss', './demo-pagination.component.scss']
 })
 export class DemoPaginationComponent {
   @ViewChild('demo') demo:DemoComponent;

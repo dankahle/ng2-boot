@@ -4,7 +4,6 @@
 
 
 pass:
-popover started
-
+should be done with progressbar, but ng2 doesn't work for crap. Not sure what it is, it's the latest version of that lib, and everything else had been working prior to that.
 
 

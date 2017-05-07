@@ -4,5 +4,22 @@
   <div class="desc">
   </div>
 </demo>
-<ng-progressbar *ngIf="demo.ngShow"></ng-progressbar>
+<div class="dk-settings" [hidden]="!demo.shown">
+
+  <span class="prop">type:</span>
+  <label class="inline"><input type="radio" [(ngModel)]="settings.type" name="type" value="success"> success</label>
+  <label class="inline"><input type="radio" [(ngModel)]="settings.type" name="type" value="info"> info</label>
+  <label class="inline"><input type="radio" [(ngModel)]="settings.type" name="type" value="warning"> warning</label>
+  <label class="inline"><input type="radio" [(ngModel)]="settings.type" name="type" triggers value="danger"> danger</label><br>
+
+  <label class="inline">striped <input type="checkbox" [(ngModel)]="settings.striped"></label>
+  <label class="inline">animated <input type="checkbox" [(ngModel)]="settings.animated"></label><br>
+
+  <label class="inline">show value <input type="checkbox" [(ngModel)]="settings.showValue"></label>
+  <input type="number" [(ngModel)]="settings.value"><br>
+  <label class="inline">custom value</label><input [(ngModel)]="settings.customValue">
+
+
+</div>
+<ng-progressbar *ngIf="demo.ngShow" [settings]="settings"></ng-progressbar>
 <ng2-progressbar  *ngIf="demo.ng2Show"></ng2-progressbar>

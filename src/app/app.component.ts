@@ -14,6 +14,7 @@ export class AppComponent {
 
    // ngx-bootstrap modal: You need this small hack in order to catch application root view container ref
    public constructor(private viewContainerRef:ViewContainerRef) {
+
    }
 
 }

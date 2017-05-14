@@ -1,0 +1,15 @@
+
+<demo #demo>
+  <div class="title">rating bar</div>
+  <div class="desc">
+    Simple case is easy enough, but custom templates, more difficult. ng2 uses glyphicons, which are only in boot3, so had to hack up the equivalent stars using icomoon
+  </div>
+</demo>
+<div class="dk-settings" [hidden]="!demo.shown">
+
+  <label class="prop">rating</label> <input type="number" [(ngModel)]="settings.rate"><br>
+  <label class="inline">read only <input type="checkbox" [(ngModel)]="settings.readonly"></label>
+</div>
+
+<ng-rating *ngIf="demo.ngShow" [settings]="settings"></ng-rating>
+<ng2-rating  *ngIf="demo.ng2Show" [settings]="settings"></ng2-rating>

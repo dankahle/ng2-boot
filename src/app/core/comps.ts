@@ -12,6 +12,7 @@ import {DemoDropdownComponent} from "../components/demo/demo-dropdown/demo-dropd
 import {DemoPaginationComponent} from "../components/demo/demo-pagination/demo-pagination.component";
 import {DemoPopoverComponent} from "../components/demo/demo-popover/demo-popover.component";
 import {DemoProgressbarComponent} from "../components/demo/demo-progressbar/demo-progressbar.component";
+import {DemoRatingComponent} from "../components/demo/demo-rating/demo-rating.component";
 
 export const comps: Comp[] = [
   {name: 'accordion', type: DemoAccordionComponent, group: CompGroup.boot},
@@ -25,6 +26,7 @@ export const comps: Comp[] = [
   {name: 'pagination', type: DemoPaginationComponent, group: CompGroup.boot},
   {name: 'popover', type: DemoPopoverComponent, group: CompGroup.boot},
   {name: 'progressbar', type: DemoProgressbarComponent, group: CompGroup.boot},
+  {name: 'rating', type: DemoRatingComponent, group: CompGroup.boot},
 
   {name: 'dkDynamic', type: DemoDynamicComponent, group: CompGroup.mine},
   {name: 'jquiDatePicker', type: DemoJquiDatePickerComponent, group: CompGroup.mine}

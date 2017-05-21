@@ -1,0 +1,10 @@
+
+
+ngx tabs vertical is not working
+
+ngx progressbar broken
+ngx progressbar is broken currently. They need to fix it
+
+ng <template> issue:
+demo versions use ng-template, which breaks this version of ng, so replace all ng-template with template until you upgrade
+

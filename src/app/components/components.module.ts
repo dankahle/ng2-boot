@@ -13,7 +13,7 @@ import {Ng2AlertComponent} from './ng2-bootstrap/ng2-alert/ng2-alert.component';
 import {DemoComponent} from './demo/demo/demo.component';
 import {
   AlertModule, CollapseModule, ModalModule, AccordionModule, ButtonsModule, CarouselModule,
-  DatepickerModule, BsDropdownModule, PaginationModule, PopoverModule, ProgressbarModule, RatingModule
+  DatepickerModule, BsDropdownModule, PaginationModule, PopoverModule, ProgressbarModule, RatingModule, TabsModule
 } from 'ngx-bootstrap';
 
 import {Ng2CollapseComponent} from './ng2-bootstrap/ng2-collapse/ng2-collapse.component';
@@ -53,6 +53,9 @@ import {Ng2ProgressbarComponent} from './ng2-bootstrap/ng2-progressbar/ng2-progr
 import {DemoRatingComponent} from './demo/demo-rating/demo-rating.component';
 import {NgRatingComponent} from './ng-bootstrap/ng-rating/ng-rating.component';
 import {Ng2RatingComponent} from './ng2-bootstrap/ng2-rating/ng2-rating.component';
+import { DemoTabsComponent } from './demo/demo-tabs/demo-tabs.component';
+import { NgTabsComponent } from './ng-bootstrap/ng-tabs/ng-tabs.component';
+import { Ng2TabsComponent } from './ng2-bootstrap/ng2-tabs/ng2-tabs.component';
 
 @NgModule({
   imports: [
@@ -61,18 +64,20 @@ import {Ng2RatingComponent} from './ng2-bootstrap/ng2-rating/ng2-rating.componen
     NgbModule,
     AlertModule.forRoot(), CollapseModule.forRoot(), ModalModule.forRoot(), AccordionModule.forRoot(), ButtonsModule.forRoot(),
     CarouselModule.forRoot(), DatepickerModule.forRoot(), BsDropdownModule.forRoot(), PaginationModule.forRoot(),
-    PopoverModule.forRoot(), ProgressbarModule.forRoot(), RatingModule.forRoot()
+    PopoverModule.forRoot(), ProgressbarModule.forRoot(), RatingModule.forRoot(), TabsModule.forRoot()
   ],
   providers: [JquiDatepickerConfigService],
   declarations: [NgModalComponent, NgAlertComponent, DkDynamicComponent, ChildComponent, NgCollapseComponent, DemoModalComponent,
     DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, Ng2AlertComponent, DemoComponent, Ng2CollapseComponent,
     DemoCurrentComponent, NgModalComponent, Ng2ModalComponent, NgModalBaseComponent, DemoAccordionComponent,
-    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent, DemoPaginationComponent, NgPaginationComponent, Ng2PaginationComponent, DemoPopoverComponent, NgPopoverComponent, Ng2PopoverComponent, DemoProgressbarComponent, NgProgressbarComponent, Ng2ProgressbarComponent, DemoRatingComponent, NgRatingComponent, Ng2RatingComponent],
+    Ng2AccordionComponent, NgAccordionComponent, DemoButtonsComponent, Ng2ButtonsComponent, NgButtonsComponent, DemoCarouselComponent, NgCarouselComponent, Ng2CarouselComponent, DemoDatePickerComponent, NgDatePickerComponent, Ng2DatePickerComponent, DemoJquiDatePickerComponent, JquiDatePickerDirective, DemoDropdownComponent, NgDropdownComponent, Ng2DropdownComponent, DemoPaginationComponent, NgPaginationComponent, Ng2PaginationComponent, DemoPopoverComponent, NgPopoverComponent, Ng2PopoverComponent, DemoProgressbarComponent, NgProgressbarComponent, Ng2ProgressbarComponent, DemoRatingComponent, NgRatingComponent, Ng2RatingComponent, DemoTabsComponent, NgTabsComponent, Ng2TabsComponent],
 
   exports: [DemoCurrentComponent],
 
   entryComponents: [DemoModalComponent, DemoAlertComponent, DemoDynamicComponent, DemoCollapseComponent, DemoModalComponent,
-    NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent, DemoJquiDatePickerComponent, DemoDropdownComponent, DemoPaginationComponent, DemoPopoverComponent, DemoProgressbarComponent, DemoRatingComponent],
+    NgModalComponent, Ng2ModalComponent, DemoAccordionComponent, DemoButtonsComponent, DemoCarouselComponent, DemoDatePickerComponent,
+    DemoJquiDatePickerComponent, DemoDropdownComponent, DemoPaginationComponent, DemoPopoverComponent, DemoProgressbarComponent,
+    DemoRatingComponent, DemoTabsComponent],
 
 })
 export class ComponentsModule {

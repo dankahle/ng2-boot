@@ -1,0 +1,24 @@
+
+<ngb-tabset
+  [destroyOnHide]="!settings.sticky"
+  [justify]="settings.justify"
+  [type]="settings.type"
+  [activeId]="settings.activeIdx">
+  <ngb-tab title="Simple">
+    <template ngbTabContent>
+      the value will persist between tab changes if sticky: <input>
+      <p>One. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+    </template>
+  </ngb-tab>
+  <ngb-tab>
+    <template ngbTabTitle><b>Fancy</b> title</template>
+    <template ngbTabContent>
+      <p>Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+    </template>
+  </ngb-tab>
+  <ngb-tab title='Disabled' [disabled]="true">
+    <template ngbTabContent>
+      <p>Three. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+    </template>
+  </ngb-tab>
+</ngb-tabset>

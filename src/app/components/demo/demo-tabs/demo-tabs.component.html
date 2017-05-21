@@ -1,0 +1,40 @@
+<demo #demo>
+  <div class="title">tabs</div>
+  <div class="desc">
+    ng has sticky tabs, but doesn't do vertical. ng2 does vertical, but doesn't do sticky, but vertical is currently broken.
+  </div>
+</demo>
+<div class="dk-settings" [hidden]="!demo.shown">
+
+  <div>
+    <div class="prop">type:</div>
+    <label *ngFor="let type of types" class="inline">
+      <input type="radio" [(ngModel)]="settings.type" name="type" [value]="type"> {{type}}</label>
+  </div>
+
+  <div *ngIf="demo.ngShow">
+    <div class="prop">justify:</div>
+    <label *ngFor="let justify of justifys" class="inline">
+      <input type="radio" [(ngModel)]="settings.justify" name="justify" [value]="justify"> {{justify}}</label>
+  </div>
+
+  <div *ngIf="demo.ng2Show">
+    <div class="prop">justified:</div>
+    <input type="checkbox" [(ngModel)]="settings.justified">
+  </div>
+
+  <div *ngIf="demo.ngShow">
+    <span class="prop">sticky</span>
+    <input type="checkbox" [(ngModel)]="settings.sticky">
+  </div>
+
+  <div *ngIf="demo.ng2Show">
+    <span class="prop">vertical</span>
+    <input type="checkbox" [(ngModel)]="settings.vertical">
+  </div>
+
+</div>
+
+
+<ng-tabs *ngIf="demo.ngShow" [settings]="settings"></ng-tabs>
+<ng2-tabs  *ngIf="demo.ng2Show" [settings]="settings"></ng2-tabs>

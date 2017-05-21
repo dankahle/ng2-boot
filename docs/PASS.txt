@@ -1,10 +1,10 @@
 
 
-bugs
-* progres
-
-
 pass:
-should be done with progressbar, but ng2 doesn't work for crap. Not sure what it is, it's the latest version of that lib, and everything else had been working prior to that.
+
+you almost have ng tabs working, but realized the tab settings were skewed heavily to ng. You need these settings to be declared in their respective component files, exported and imported into demo comp which set's up the UI for them. ng justified is one of 3 strings, ngx is boolean, so need to get all together that your'e setting and come up with 2 separate ui sections that set things appropriately. I.e. screw trying to get the common things together and work on 2 separate sections entirely that you ngIf.
+
+this will finish up ng, and then start on ngx. WATCH OUT FOR <ng-template>!!! Youre current version of ng doesn't put up with it. Let it warn you but at least things work.
+
 
 

@@ -1,3 +1,4 @@
+/*
 import {Component, OnInit, Input, ViewChild} from '@angular/core';
 import {DemoDatePickerComponent} from "../../demo/demo-date-picker/demo-date-picker.component";
 import * as moment from 'moment';
@@ -56,3 +57,4 @@ export class Ng2DatePickerComponent {
   }
 
 }
+*/

@@ -1,0 +1,17 @@
+
+pass:
+This is a mess. You were working on protractor-demo and couldn't get bootstrap css <link> to work. It appears they've changed something and these local paths no longer work. You updated angular/cli and the package.json and finally have it working, but still keep getting the same old datepicker error, even though you've commented out all the datepicker code. What? Might be jqdatepicker, but I doubt it as it's referring to datepickermodule which is ngx-bootstrap from what I can see.
+
+Anyway hacked up the date picker demo and comps, and still ahve the error. Now you're noticing that all the index.html paths aren't coming in (so they did change something there). This project relies heavily on that feature (js and css head links pointing to node_modules/bower_components). How could they do that.
+
+It's possible that a build will work, but that's a major hassle and what's the point of ng serve then watching files, when you have to build to get the links working? You're missing something here.
+
+Ok, so looking at their wiki, looks like you're supposed to add the styles and scripts in the styles and scripts arrays in angular-cli.json. Do that next. Not sure there wasn't a breaking change listed in the releases, but the releases go on and on
+
+
+
+
+
+
+
+

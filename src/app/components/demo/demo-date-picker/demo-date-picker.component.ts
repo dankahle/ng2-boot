@@ -1,3 +1,4 @@
+/*
 import {Component, OnInit, ViewChild, EventEmitter} from '@angular/core';
 import {NgbDateStruct} from "@ng-bootstrap/ng-bootstrap";
 import {NgDatePickerComponent} from "../../ng-bootstrap/ng-date-picker/ng-date-picker.component";
@@ -71,3 +72,4 @@ export class DemoDatePickerComponent {
   }
 
 }
+*/

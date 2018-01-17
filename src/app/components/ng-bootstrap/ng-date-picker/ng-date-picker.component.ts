@@ -1,3 +1,4 @@
+/*
 import {Component, OnInit, Input, ViewChild, Optional} from '@angular/core';
 import {NgbDateStruct, NgbDatepicker, NgbDateParserFormatter} from "@ng-bootstrap/ng-bootstrap";
 import {DemoDatePickerComponent} from "../../demo/demo-date-picker/demo-date-picker.component";
@@ -52,12 +53,12 @@ export class NgDatePickerComponent {
     this._parent.thisMonth.subscribe(this.thisMonth.bind(this));
   }
 
-/*
+/!*
   // this won't work cause parent is already using @ViewChild to see this guy. Can't have both evidently
   constructor(private demoDatePicker:DemoDatePickerComponent) {
 
   }
-*/
+*!/
 
   ngbDateStructFromDate(date) {
     if (date) {
@@ -67,3 +68,4 @@ export class NgDatePickerComponent {
 
 }
 
+*/

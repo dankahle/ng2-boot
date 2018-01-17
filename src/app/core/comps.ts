@@ -21,7 +21,7 @@ export const comps: Comp[] = [
   {name: 'buttons', type: DemoButtonsComponent, group: CompGroup.boot},
   {name: 'carousel', type: DemoCarouselComponent, group: CompGroup.boot},
   {name: 'collapse', type: DemoCollapseComponent, group: CompGroup.boot},
-  {name: 'datepicker', type: DemoDatePickerComponent, group: CompGroup.boot},
+  // {name: 'datepicker', type: DemoDatePickerComponent, group: CompGroup.boot},
   {name: 'dropdown', type: DemoDropdownComponent, group: CompGroup.boot},
   {name: 'modal', type: DemoModalComponent, group: CompGroup.boot},
   {name: 'pagination', type: DemoPaginationComponent, group: CompGroup.boot},
